@@ -59,17 +59,16 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
   }
 }
 ?>
-
 <?php
-
 if(isset($_POST['reg'])){
+  $affid = $_POST['affid'];
   if($pass===$cpass){
-    $active = "<a href='https://zenithbrokertrade.org/users/admin/login.php>Login</a>";
+    $active = "<a href='https://zenithbrokertrade.org/user/admin/login.php'>Login</a>";
     $sql_check_email_exists = "SELECT * FROM users WHERE user_email = '$email'";
     $sql_check_email_exec = $con->query($sql_check_email_exists);
     if(mysqli_num_rows($sql_check_email_exec)>0){$toast = "email";}
     else{
-  $sqlIns = "INSERT INTO users(firstname,lastname,user_email,user_pass)VALUES('$fname','$lname','$email','$cpass')";
+  $sqlIns = "INSERT INTO users(firstname,lastname,user_email,user_pass,affid)VALUES('$fname','$lname','$email','$cpass','$affid')";
   $sqlC = $con->query($sqlIns);
  if($sqlC){
   //Load Composer's autoloader
@@ -94,7 +93,7 @@ try {
     $mail->addAddress('admin@zenithbrokertrade.org');
     $mail->isHTML(true);
     $mail->Subject = 'You have a new member';
-    $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. https://zenithbrokertrade.org/users/admin/login.php';
+    $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. https://zenithbrokertrade.org/user/admin/login.php';
     $mail->AltBody = 'A new member has just registered on the platform. Login to the admin dashboard to see this person';
     $mail->send();
 } catch (Exception $e){echo " ";}
@@ -137,19 +136,20 @@ try {
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-<style type="text/css">
-  .err{color:indianred;}
-</style>
+<link rel="stylesheet" type="text/css" href="../custom.css">
 </head>
 <body class="hold-transition login-page sty1">
 <div class="login-box sty1">
   <div class="login-box-body sty1">
-  <div class="login-logo">
-    <a href="#"><span class="lead">Create A Trading Account</span>
+  <div class="login-logo m-t-0 p-t-0">
+    <a href="#"><span class="lead"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span></span>
       <!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
   </div>
-    <p class="login-box-msg">Fill the signup form to create your data</p>
+    <p class="login-box-msg m-t-0 p-t-0">Fill the form to create a trading account</p>
      <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" name="regForm">
+      <div class="form-group has-feedback">
+        <input type="text" name="affid" class="form-control sty1" value="<?= mt_rand(100000,999999);?>" hidden>
+      </div>
       <div class="form-group has-feedback">
         <input type="text" name="fname" class="form-control sty1" placeholder="Firstname" required>
         <span class="err"><?= $fnameErr; ?></span>
@@ -184,7 +184,7 @@ try {
         </div>
         <!-- /.col -->
         <div class="col-xs-4 m-t-1">
-          <div class="m-t-1">Already have an account? <a href="login.php" class="text-center">Sign In</a></div>
+          <div class="">Already have an account? <a href="login.php" class="text-center">Sign In</a></div>
           <button type="submit" class="btn btn-warning btn-block btn-flat" name="reg">Sign Up</button>
         </div>
         <!-- /.col --> 

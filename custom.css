@@ -1,0 +1,10 @@
+ body{font-family: lato,raleway,tahoma !important;}
+    .text-white{color: #fff !important;}
+   li > a:hover, .orange{color: #FFAB00 !important;}
+    .bgOrange{background:linear-gradient(to right,#FFAB00,orange,white) !important;}
+    hr{color:#FFAB00;}
+    footer .footer-bottom{line-height: 26px !important;}
+.err{color:indianred;}
+.login-box-body.sty1, .register-box-body.sty1{padding-top:10% !important;}
+.register-box-msg{padding: 0 20px 5px 0px; !important;}
+.cursive{font-family:cursive !important;}

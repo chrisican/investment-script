@@ -34,13 +34,9 @@
 <link rel="stylesheet" href="css/responsive.css">
 <!-- modernizr css -->
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-<style type="text/css">
-    body{font-family: lato,raleway,tahoma !important;}
-    .text-white{color: #fff !important;}
-   li > a:hover, .orange{color: #FFAB00 !important;}
-    .bgOrange{background:linear-gradient(to right,#FFAB00,orange,white) !important;}
-    hr{color:#FFAB00;}
-</style>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 
 <body>
@@ -57,7 +53,7 @@
 <div class="row">
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-6">
 <div class="logo-area">
-<a href="index.html"><h2 style="font-family:cursive; color:white;">ZenithBroker<span class="orange">Trade</span></h2><!-- <img src="images/logo/logo.png" alt="logo" /> --></a>
+<a href="index.html"><h2 style="font-family:cursive; color:white;"><center>ZenithBroker<span class="orange">Trade</span></center></h2><!-- <img src="images/logo/logo.png" alt="logo" /> --></a>
 </div>
 </div>
 <!-- Mobile Menu  Start -->
@@ -160,7 +156,7 @@
                         <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="#"><i class="fa fa-bitcoin"></i></a></li>
                         <li data-animation="animated bounceInDown" class="slider_social_icon5"><a href="mailto:support@zenithbrokertrade.org"><i class="fa fa-envelope"></i></a></li>
                     </ul>
-                    <h2 data-animation="animated bounceInLeft">Zenith Broker <span class="orange">Trade</span> -<br>Biggest Crypto Staking Platform</h2>
+                    <h2 data-animation="animated bounceInLeft">Zenith Broker <span class="orange">Trade</span> -<br>Biggest Crypto Trading Platform</h2>
                     <div class="buttons">
                         <a href="user/login.php" class="btn1 bgOrange" data-animation="animated bounceInUp">START NOW</a>
                         <a href="docs/about.php" class="btn2 bgOrange" data-animation="animated bounceInUp">LEARN MORE</a>
@@ -208,7 +204,7 @@
                     <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="#"><i class="fa fa-bitcoin"></i></a></li>
                     <li data-animation="animated bounceInDown" class="slider_social_icon5"><a href="mailto:support@zenithbrokertrade.org"><i class="fa fa-envelope"></i></a></li>
                 </ul>
-                <h2 data-animation="animated bounceInLeft">Zenith Broker <span class="orange">Trade</span> - <br>Biggest Investment Packages</h2>
+                <h2 data-animation="animated bounceInLeft">Zenith Broker <span class="orange">Trade</span> - <br>Biggest Trading Plans</h2>
                 <div class="buttons">
                     <a href="user/login.php" class="btn1 bgOrange" data-animation="animated bounceInUp">START NOW</a>
                     <a href="docs/about.php" class="btn2 bgOrange" data-animation="animated bounceInUp">LEARN MORE</a>
@@ -312,9 +308,9 @@
 <div class="row">
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 <div class="about-content">
-<h2 class="f-40 fw-400 wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">About Zenith Broker Trade</h2>
-<p class="wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</p>
-<p class="wow  fadeInUp animated" data-wow-duration="1.6s" style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">We provide a dynamic investment solution to clients in need of a self-operating portfolio, as well as a smart fund with flexible time and investment amount.</p>
+<h2 class="f-40 fw-400 wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">About Zenith Broker <span class="orange">Trade</span></h2>
+<p class="wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">Zenith Broker Trade is a registered trading platform providing digital asset trading management services to individuals, lending and trading, multicurrency and multifunctional online platform based on blockchain technology.</p>
+<p class="wow  fadeInUp animated" data-wow-duration="1.6s" style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">We provide a dynamic trading solution to clients in need of a self-operating portfolio, as well as a smart fund with flexible time and trading amount.</p>
 <p class="wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeInUp;">Zenith Broker Trade is a multi-functional platform which allows each participant to keep money in a multi-currency online wallet, buy and sell currency on the exchange, invest money, get a loan in a convenient currency.</p>
 <div class="buttons">
     <a href="docs/about.php" class="btn1 bgOrange">READ MORE</a>
@@ -414,8 +410,8 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
         <li>
             <div class="col-sm-6 pd-0 hidden-xs wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeInUp;">
                 <div class="contents-l mr-b30">
-                    <h2>Investment</h2>
-                    <p>Improved system of investor verification. Providing
+                    <h2>Trading</h2>
+                    <p>Improved trading system of investor verification. Providing
                         <br>verification services for other services.</p>
                      <a href="#6" class="btn1 bgOrange">Invest Now</a>
                 </div>
@@ -427,8 +423,8 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
             </div>
             <div class="col-sm-6 pd-0 visible-xs wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeInUp;">
                 <div class="contents-l mr-b30">
-                    <h2>Investment</h2>
-                    <p>Improved system of investor verification. Providing
+                    <h2>Trading</h2>
+                    <p>Improved trading system of investor verification. Providing
                         <br>verification services for other services.</p>
                      <a href="#6" class="btn1 bgOrange">Invest Now</a>
                 </div>
@@ -555,7 +551,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="videos-heding">
-    <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Development of Zenith Broker Trade Platform<br>(Road Map)</h2>
+    <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Development of Zenith Broker <span class="orange">Trade</span> Platform<br>(Road Map)</h2>
     <div class="videos-box">
         <video id="my-video" class="video-js" controls preload="auto" width="770" height="400" poster="images/video/1.png" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://youtu.be/Gc2en3nHxA4"}], "youtube": { "customVars": { "wmode": "transparent" } } }'>
         </video>
@@ -764,7 +760,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="section-heading2">
-    <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Investment Plans With Guaranteed Profitability<br><small>Zenith Broker Trade</small></h2>
+    <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Trading Plans With Guaranteed Profitability<br><small>Zenith Broker <span class="orange">Trade</span></small></h2>
 </div>
 </div>
 <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
@@ -1298,21 +1294,20 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="copyright wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">
-    <p><center>©<?= date('Y');?> <a href="#"><span>Zenith Broker Trade</span></a> | All rights reserved. &nbsp; Zenith Broker Trade - The easiest place to invest bitcoin.
-    </center></p>
+    <p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p>
 </div>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="foo-link wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">
    <ul>
-    <center>
+    <center><small>
         <li><a href="user/login.php">Login/Register</a></li>
         <li><a href="docs/terms-of-use.php">Terms of Service</a></li>
         <li><a href="docs/about.php">About</a></li>
         <li><a href="docs/cookie-policy.php">Cookie Policy</a></li>
         <li><a href="docs/refund-policy.php">Refund Policy</a></li>
         <li><a href="docs/privacy-policy.php">Privacy Policy</a></li>
-    </center>
+    </small></center>
     </ul>
 </div>
 </div>

@@ -27,15 +27,15 @@ try {
     //Server settings
      $mail->SMTPDebug = 0;                      //Enable verbose debug output SMTP::DEBUG_SERVER
     $mail->isSMTP();                                      //Send using SMTP
-    $mail->Host       = 'p2pxtrade.com';        //Set the SMTP server to send through
+    $mail->Host       = 'zenithbrokertrade.org';        //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                             //Enable SMTP authentication
-    $mail->Username   = 'support@p2pxtrade.com';          //SMTP username
-    $mail->Password   = 'SUPPORTemail001';                  //SMTP password
+    $mail->Username   = 'support@zenithbrokertrade.org';          //SMTP username
+    $mail->Password   = '#SUPPORTmail99';                  //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;      //Enable implicit TLS encryption
     $mail->Port       = 465;                              //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('noreply@p2pxtrade.com', 'p2pxtrade');
+    $mail->setFrom('noreply@zenithbrokertrade.org', 'Zenith Broker Trade');
     $mail->addAddress($_GET['em'], $_GET['fn']);     //Add a recipient
 
     //Content
@@ -53,7 +53,7 @@ else{echo "<script>location.href='login.php'</script>";
 ?>
 <body class="page-user" style="background-color: #fff !important;">
     <div class="row">
- <div class="col-12"><p><big>Welcome to p2pxtrade!<br>
+ <div class="col-12"><p><big>Welcome to Zenith Broker <span class="orange">Trade</span>!<br>
 Kindly check your mail inbox for the welcome mail to certify verification.<br> 
 Safe trade, swift and secure transactions.</big></p>
 </div></div>
@@ -73,7 +73,6 @@ Safe trade, swift and secure transactions.</big></p>
 
 <!-- Toastr -->
 <script src="dist/js/toastr.min.js"></script>
-<script src="//code.tidio.co/ylcbkybnqaslgvjzhluenllylwxzgcyl.js" async></script>
     </body>
     </html>
     <?php

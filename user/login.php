@@ -65,15 +65,15 @@ else{
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
+<link rel="stylesheet" type="text/css" href="../custom.css">
 </head>
 <body class="hold-transition login-page sty1">
 <div class="login-box sty1">
   <div class="login-box-body sty1">
   <div class="login-logo">
-    <a href="#"><span class="lead">Login To Your Trade Account</span><!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
+    <a href="#"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span><!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
   </div>
-    <p class="login-box-msg">Enter correct login details to begin your session</p>
+    <p class="login-box-msg">Enter correct login details to login to your trade account and begin your session</p>
    <form action="<?= htmlentities($_SERVER['PHP_SELF']);?>" method="post" name="loginForm">
       <div class="form-group has-feedback">
         <input type="email" class="form-control sty1" placeholder="Username" name="user" title="Username is required" value="<?php if(isset($_COOKIE['email'])){echo $_COOKIE['email'];}?>" required>
