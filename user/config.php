@@ -5,7 +5,7 @@ include('session.php');
 define('SERVER', 'localhost');
 define('USER', 'root');
 define('PASS', '');
-define('DB', 'pxtrade');
+define('DB', 'zenbroker');
 
 $con = new mysqli(SERVER,USER,PASS,DB);
 
@@ -19,10 +19,6 @@ $sql_exec = $con->query($sql_profile);
 foreach($sql_exec as $info){extract($info);
 //$profile_photo = '../upload/'.$photo;
 }
-
-$sql_wallet = "SELECT * FROM `wallet` WHERE `user_email`='$session_email'";
-$sql_exec2 = $con->query($sql_wallet);
-foreach($sql_exec2 as $wallet_info){extract($wallet_info);}
 
 $sql_admin = "SELECT * FROM `admin` WHERE `user_email`='$session_email'";
 $sql_exec3 = $con->query($sql_admin);

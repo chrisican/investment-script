@@ -803,7 +803,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
         <div class="token-name bgOrange">Zenith Broker Trade</div>
         <div class="token-body">
             <p>Premium Pack</p>
-             <span class="lead bg-secondary">Price $1001.00</span>
+             <span class="lead bg-secondary">Price $1,000.00</span>
             <div class="prices">
                 <h3 class="f-20">Bonus:</h3>
               <table>
@@ -839,7 +839,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
         <div class="token-name bgOrange">Zenith Broker Trade</div>
         <div class="token-body">
             <p>Gold Pack</p>
-             <span class="lead bg-secondary">Price $10001.00</span>
+             <span class="lead bg-secondary">Price $10,000.00</span>
             <div class="prices">
                 <h3 class="f-20">Bonus:</h3>
                 <table>
@@ -873,7 +873,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
         <div class="token-name bgOrange">Zenith Broker Trade</div>
         <div class="token-body">
             <p>Gold Plus</p>
-            <span class="lead bg-secondary">Price $100001.00</span>
+            <span class="lead bg-secondary">Price $100,000.00</span>
             <div class="prices">
                 <h3 class="f-20">Bonus:</h3>
               <table>

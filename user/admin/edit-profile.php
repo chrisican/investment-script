@@ -210,7 +210,7 @@ $con->close();
                       </div>                     
                       <div class="form-group">
                         <div class="col-sm-12">
-                          <button type="submit" class="btn btn-success" name="uProfile">Update Profile</button>
+                          <button type="submit" class="btn btn-warning" name="uProfile">Update Profile</button>
                         </div>
                       </div>
 
@@ -242,7 +242,7 @@ $con->close();
                       </div>            
                       <div class="form-group">
                         <div class="col-sm-12">
-                          <button type="submit" class="btn btn-success" name="uPwd">Update Password</button>
+                          <button type="submit" class="btn btn-warning" name="uPwd">Update Password</button>
                         </div>
                       </div>
                     </form>
@@ -260,7 +260,7 @@ $con->close();
                       </div>
                       <div class="form-group">
                         <div class="col-sm-6 col-xs-12">
-                          <button type="submit" class="btn btn-success" name="uPhoto">Upload</button>
+                          <button type="submit" class="btn btn-warning" name="uPhoto">Upload</button>
                         </div>
                       </div>
                     </form>

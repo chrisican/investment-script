@@ -18,9 +18,9 @@
                             <div class="toggle-class dropdown-content dropdown-content-right dropdown-arrow-right user-dropdown dds">
                                 
                                 <ul class="user-links">
-                 <li><a href="/user/edit-profile.php"><i class="fa fa-user"></i> Edit Profile</a>
+                 <li><a href="https://zenithbrokertrade.org/user/edit-profile.php"><i class="fa fa-user"></i> Edit Profile</a>
                                     </li>
-                <li><a href="/user/edit-profile.php"><i class="fa fa-key"></i> Reset Password</a>
+                <li><a href="https://zenithbrokertrade.org/user/edit-profile.php"><i class="fa fa-key"></i> Reset Password</a>
                                     </li>
                                 </ul>
                                 <ul class="user-links bg-light">
@@ -42,21 +42,14 @@
             <div class="container">
                 <div class="navbar-innr">
                     <ul class="navbar-menu">
-                        <li><a href="/user/user-area.php"><span class="icon-s"><i class="fa fa-columns"></i>
+                        <li><a href="https://zenithbrokertrade.org/user/user-area.php"><span class="icon-s"><i class="fa fa-columns"></i>
                                     Dashboard</a></li>
-                        <li><a href="/user/edit-profile.php"><span class="icon-s"><i class="fa fa-user"></i>Edit Profile</a></li>
-                        <li><a href="/user/create-trade.php"><i class="fa fa-chart-line"></i>Create Trade</a>
+                        <li><a href="https://zenithbrokertrade.org/user/edit-profile.php"><span class="icon-s"><i class="fa fa-user"></i>Edit Profile</a></li>
+                        <li><a href="https://zenithbrokertrade.org/user/create-trade.php"><i class="fa fa-chart-line"></i>Create Trade</a>
                         </li>
-                        <li class="has-dropdown page-links-all">
-                            <a class="drop-toggle" href="#"><i class="fa fa-chart-area"></i>Trading Room</a>
-                            <ul class="navbar-dropdown">
-                                <li><a class="p2pText" href="/user/view-room.php">View Rooms</a></li>
-                                <li><a class="p2pText" href="/user/join-room.php">Join Room</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/user/user-transactions.php"><i class="fa fa-file-invoice-dollar"></i> Account Transactions</a></li>
+                        <li><a href="https://zenithbrokertrade.org/user/user-transactions.php"><i class="fa fa-file-invoice-dollar"></i> Account Transactions</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#withdrawal-modal"><i class="fa fa-hand-holding-usd"></i> Withdrawal</a></li>
-                         <li><a href="/user/logout.php"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+                         <li><a href="https://zenithbrokertrade.org/user/logout.php"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                     <ul class="navbar-btns">
                         <li>
@@ -83,7 +76,6 @@
                 <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
                 <div class="popup-body">
                     <form method="POST" action="fund-account.php">
-                        <!-- <input type="hidden" name="_token" value="ZbxLR83NJvu7Dwj3KmAR6ZFgMXG5d2po7uem0Zt2">  --> 
                         <input type="hidden" name="Ftxn" value="<?= 'TXN'.mt_rand(100000,999999);?>">                      
                         <div class="input-item input-with-label">
                             <label class="input-item-label">Select currency to fund</label>
@@ -91,51 +83,6 @@
                                 <select class="input-bordered" name="currency_id">
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
-                                         <!--  <option value="Ethereum" >Ethereum</option>
-                                          <option value="Bitcoin" >Bitcoin</option>
-                                          <option value="USD Coin" >USD Coin</option>
-                                          <option value="Tron" >Tron</option>
-                                          <option value="Bscpad" >Bscpad</option>
-                                          <option value="Shiba inu" >Shiba inu</option>
-                                          <option value="Tether" >Tether</option>
-                                          <option value="Algorand" >Algorand</option>
-                                          <option value="Kmushicoin" >Kmushicoin</option>
-                                          <option value="Cardence" >Cardence</option>
-                                          <option value="Helium" >Helium</option>
-                                          <option value="Cryptomines" >Cryptomines</option>
-                                          <option value="Ecomi" >Ecomi</option>
-                                          <option value="Ecomi" >Robot Shib</option>
-                                          <option value="Uniswap" >Uniswap</option>
-                                          <option value="Avalanche" >Avalanche</option>
-                                          <option value="Decentraland" >Decentraland</option>
-                                          <option value="Gravitoken" >Gravitoken</option>
-                                          <option value="Chroma" >Chroma</option>
-                                          <option value="Near" >Near</option>
-                                          <option value="Filecoin" >Filecoin</option>
-                                          <option value="Cardano" >Cardano</option>
-                                          <option value="Tether" >Tether (TRC 20)</option>
-                                          <option value="CHILIZ" >CHILIZ</option>
-                                          <option value="Trias Token" >Trias Token</option>
-                                          <option value="Ibnb" >Ibnb</option>
-                                          <option value="Polkadot" >Polkadot</option>
-                                          <option value="Solana" >Solana</option>
-                                          <option value="LUNA" >LUNA</option>
-                                          <option value="Helium" >Helium</option>
-                                          <option value="RaDAO" >RaDAO</option>
-                                          <option value="Radio Caca" >Radio Caca V2</option>
-                                          <option value="One Share" >One Share</option>
-                                          <option value="Revomon" >Revomon</option>
-                                          <option value="dydX" >dydX</option>
-                                          <option value="Scan DeFi V2" >Scan DeFi V2</option>
-                                          <option value="Binance Coin" >Binance Coin</option>
-                                          <option value="Casper Network" >Casper Network</option>
-                                          <option value="Spinada Cash" >Spinada Cash</option>
-                                          <option value="Binance USD" >Binance USD</option>
-                                          <option value="Video Coin" >Video Coin</option>
-                                          <option value="Chainlink" >Chainlink</option>
-                                          <option value="The Sandbox" >The Sandbox</option>
-                                          <option value="Polygon" >Polygon</option>
-                                          <option value="Binance Smart chain" >Binance Smart chain</option> -->
                                     </select>
                             </div>
                         </div>
@@ -143,7 +90,7 @@
                             <label class="input-item-label">Enter Amount</label>
                             <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
                         </div>
-                        <button type="submit" class="btn btn-primary btn-between" name="fund">
+                        <button type="submit" class="btn btn-warning btn-between" name="fund">
                             Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
@@ -161,8 +108,7 @@
             <div class="modal-content">
                 <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
                 <div class="popup-body">
-                    <form method="POST" action="fund-account.php">
-                      <!--   <input type="hidden" name="_token" value="ZbxLR83NJvu7Dwj3KmAR6ZFgMXG5d2po7uem0Zt2">      -->   
+                    <form method="POST" action="fund-account.php">  
                        <input type="hidden" name="Wtxn" value="<?= 'TXN'.mt_rand(100000,999999);?>">                
                       <div class="input-item input-with-label">
                             <label class="input-item-label">Select withdrawal method</label>
@@ -170,51 +116,6 @@
                                 <select class="input-bordered" name="currency_id2">
                                      <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
-                                <!--   <option value="Ethereum" >Ethereum</option>
-                                          <option value="Bitcoin" >Bitcoin</option>
-                                          <option value="USD Coin" >USD Coin</option>
-                                          <option value="Tron" >Tron</option>
-                                          <option value="Bscpad" >Bscpad</option>
-                                          <option value="Shiba inu" >Shiba inu</option>
-                                          <option value="Tether" >Tether</option>
-                                          <option value="Algorand" >Algorand</option>
-                                          <option value="Kmushicoin" >Kmushicoin</option>
-                                          <option value="Cardence" >Cardence</option>
-                                          <option value="Helium" >Helium</option>
-                                          <option value="Cryptomines" >Cryptomines</option>
-                                          <option value="Ecomi" >Ecomi</option>
-                                          <option value="Ecomi" >Robot Shib</option>
-                                          <option value="Uniswap" >Uniswap</option>
-                                          <option value="Avalanche" >Avalanche</option>
-                                          <option value="Decentraland" >Decentraland</option>
-                                          <option value="Gravitoken" >Gravitoken</option>
-                                          <option value="Chroma" >Chroma</option>
-                                          <option value="Near" >Near</option>
-                                          <option value="Filecoin" >Filecoin</option>
-                                          <option value="Cardano" >Cardano</option>
-                                          <option value="Tether" >Tether (TRC 20)</option>
-                                          <option value="CHILIZ" >CHILIZ</option>
-                                          <option value="Trias Token" >Trias Token</option>
-                                          <option value="Ibnb" >Ibnb</option>
-                                          <option value="Polkadot" >Polkadot</option>
-                                          <option value="Solana" >Solana</option>
-                                          <option value="LUNA" >LUNA</option>
-                                          <option value="Helium" >Helium</option>
-                                          <option value="RaDAO" >RaDAO</option>
-                                          <option value="Radio Caca" >Radio Caca V2</option>
-                                          <option value="One Share" >One Share</option>
-                                          <option value="Revomon" >Revomon</option>
-                                          <option value="dydX" >dydX</option>
-                                          <option value="Scan DeFi V2" >Scan DeFi V2</option>
-                                          <option value="Binance Coin" >Binance Coin</option>
-                                          <option value="Casper Network" >Casper Network</option>
-                                          <option value="Spinada Cash" >Spinada Cash</option>
-                                          <option value="Binance USD" >Binance USD</option>
-                                          <option value="Video Coin" >Video Coin</option>
-                                          <option value="Chainlink" >Chainlink</option>
-                                          <option value="The Sandbox" >The Sandbox</option>
-                                          <option value="Polygon" >Polygon</option>
-                                          <option value="Binance Smart chain" >Binance Smart chain</option> -->
                         </select>
                             </div>
                         </div>
@@ -226,7 +127,7 @@
                             <label class="input-item-label">Destination Address</label>
                             <input class="input-bordered" type="text" placeholder="Address" name="address" required value="" />
                         </div>
-                        <button type="submit" class="btn btn-primary btn-between" name="withdraw">Proceed <i class="fa fa-forward"></i></button>
+                        <button type="submit" class="btn btn-warning btn-between" name="withdraw">Proceed <i class="fa fa-forward"></i></button>
                     </form>
                 </div>
             </div>
@@ -263,12 +164,178 @@
 
                         <div class="input-item input-with-label">
                            <!--  <span class="input-item-label">Pay to this Address, afterwards, come back and click the upload proof button to upload proof</span> -->
-                            <input class="input-bordered" type="text" name="add" value="<?= $addresses;?>" id="myInput" disabled><br><button type="button" class="btn btn-primary" onclick="myFunction()">Copy address</button>
+                            <input class="input-bordered" type="text" name="add" value="<?= $addresses;?>" id="myInput" disabled><br><button type="button" class="btn btn-warning" onclick="myFunction()">Copy address</button>
                             <br><output id="displayText"></output>                    
                         </div>
                     <?php } }?>
 
-                        <!-- <a href="upload-proof.php" class="btn btn-primary btn-between" name="upload-proof">Click To Upload Proof&nbsp;<i class="fa fa-forward"></i></a> -->
+                        <!-- <a href="upload-proof.php" class="btn btn-warning btn-between" name="upload-proof">Click To Upload Proof&nbsp;<i class="fa fa-forward"></i></a> -->
+                    </form>
+                </div>
+            </div>
+            <!-- .modal-content -->
+        </div>
+        <!-- .modal-dialog -->
+    </div>
+    <!-- Modal End -->
+
+     <!--STARTER PACK -->
+    <div class="modal fade sho d-bloc" id="starter-pack" tabindex="-1">
+        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+            <div class="modal-content">
+                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
+                <div class="popup-body">
+                    <form method="POST" action="fund-account.php">
+                        <input type="hidden" name="stxn" value="<?= 'TXN'.mt_rand(100000,999999);?>"> 
+                        <div class="input-item input-with-label">
+                            <div class="select-wrapper">
+                                <table class="table"><tr>
+                                    <th>Starter Pack</th></tr><tr>
+                               <td><span>Price: $100</span></td>
+                               <td><span>Duration: 1 month</span></td>
+                               <td><span>Harsh: 5 Ph/s</span></td>
+                           </tr></table>
+                            </div>
+                        </div>                     
+                        <div class="input-item input-with-label">
+                            <label class="input-item-label">Select currency to fund</label>
+                        
+                            <div class="select-wrapper">
+                                <select class="input-bordered" name="currency_id">
+                                    <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
+                                        <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
+                                    </select>
+                            </div></div>
+         
+                       <!--  <div class="input-item input-with-label">
+                            <label class="input-item-label">Enter Amount</label>
+                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
+                        </div> -->
+                        <button type="submit" class="btn btn-warning btn-between" name="starter">
+                            Proceed <i class="fa fa-forward"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- .modal-content -->
+        </div>
+        <!-- .modal-dialog -->
+    </div>
+    <!-- Modal End -->
+
+     <!--PREMIUM PACK -->
+    <div class="modal fade sho d-bloc" id="premium-pack" tabindex="-1">
+        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+            <div class="modal-content">
+                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
+                <div class="popup-body">
+                    <form method="POST" action="fund-account.php">
+                        <input type="hidden" name="ptxn" value="<?= 'TXN'.mt_rand(100000,999999);?>">                      
+                            <div class="input-item input-with-label">
+                            <div class="select-wrapper">
+                                <table class="table"><tr>
+                                    <th>Premium Pack</th></tr><tr>
+                               <td><span>Price: $1,000</span></td>
+                               <td><span>Duration: 3 months</span></td>
+                               <td><span>Harsh: 10 Ph/s</span></td>
+                           </tr></table>
+                            </div>
+                        </div>    
+                            <div class="select-wrapper">
+                                <select class="input-bordered" name="currency_id">
+                                    <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
+                                        <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
+                                    </select>
+                            </div>
+                        
+                        <div class="input-item input-with-label">
+                            <label class="input-item-label">Enter Amount</label>
+                            <input class="input-bordered" type="text" placeholder="Amount" name="premium" required />
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-between" name="premium">
+                            Proceed <i class="fa fa-forward"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- .modal-content -->
+        </div>
+        <!-- .modal-dialog -->
+    </div>
+    <!-- Modal End -->
+
+     <!--GOLD PACK -->
+    <div class="modal fade sho d-bloc" id="gold-pack" tabindex="-1">
+        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+            <div class="modal-content">
+                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
+                <div class="popup-body">
+                    <form method="POST" action="fund-account.php">
+                        <input type="hidden" name="gptxn" value="<?= 'TXN'.mt_rand(100000,999999);?>">                      
+                       <div class="input-item input-with-label">
+                            <div class="select-wrapper">
+                                <table class="table"><tr>
+                                    <th>Gold Pack</th></tr><tr>
+                               <td><span>Price: $10,000</span></td>
+                               <td><span>Duration: 3 months</span></td>
+                               <td><span>Harsh: 15 Ph/s</span></td>
+                           </tr></table>
+                            </div>
+                        </div>    
+                            <div class="select-wrapper">
+                                <select class="input-bordered" name="currency_id">
+                                    <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
+                                        <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
+                                    </select>
+                            </div>
+                        
+                        <div class="input-item input-with-label">
+                            <label class="input-item-label">Enter Amount</label>
+                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-between" name="goldpack">
+                            Proceed <i class="fa fa-forward"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- .modal-content -->
+        </div>
+        <!-- .modal-dialog -->
+    </div>
+    <!-- Modal End -->
+
+     <!--GOLD PLUS -->
+    <div class="modal fade sho d-bloc" id="gold-plus" tabindex="-1">
+        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+            <div class="modal-content">
+                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
+                <div class="popup-body">
+                    <form method="POST" action="fund-account.php">
+                        <input type="hidden" name="gpptxn" value="<?= 'TXN'.mt_rand(100000,999999);?>">                      
+                        <div class="input-item input-with-label">
+                            <div class="select-wrapper">
+                                <table class="table"><tr>
+                                    <th>GOLD PLUS</th></tr><tr>
+                               <td><span>Price: $100,000</span></td>
+                               <td><span>Duration: 3 months</span></td>
+                               <td><span>Harsh: 50 Ph/s</span></td>
+                           </tr></table>
+                            </div>
+                        </div>    
+                            <div class="select-wrapper">
+                                <select class="input-bordered" name="currency_id">
+                                    <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
+                                        <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
+                                    </select>
+                            </div>
+                        <div class="input-item input-with-label">
+                            <label class="input-item-label">Enter Amount</label>
+                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-between" name="goldplus">
+                            Proceed <i class="fa fa-forward"></i>
+                        </button>
                     </form>
                 </div>
             </div>

@@ -41,7 +41,7 @@ else{
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Admin Login Area | P2pxTrade</title>
+<title>Admin Login Area | Zenith Broker Trade</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
@@ -67,13 +67,13 @@ else{
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
+<link rel="stylesheet" type="text/css" href="../../custom.css">
 </head>
 <body class="hold-transition login-page sty1">
 <div class="login-box sty1">
   <div class="login-box-body sty1">
   <div class="login-logo">
-    <a href="https://p2pxtrade.com"><img src="../dist/img/p2pdark.png" width="" height="" alt="p2pxtrade" title="P2Pxtrade"></a>
+  <a href="#"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span><!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
   </div>
     <p class="login-box-msg">Sign in to start your session - Admins only</p>
    <form action="<?= htmlentities($_SERVER['PHP_SELF']);?>" method="post" name="loginForm">
@@ -93,7 +93,7 @@ else{
         </div>
         <!-- /.col -->
         <div class="col-xs-4 m-t-1">
-          <button type="submit" class="btn btn-primary btn-block btn-flat" name="signin">Sign In</button>
+          <button type="submit" class="btn btn-warning btn-block btn-flat" name="signin">Sign In</button>
         </div>
         <!-- /.col --> 
       </div>

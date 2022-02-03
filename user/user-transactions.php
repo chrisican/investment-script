@@ -26,7 +26,7 @@ include('cookie.php');
 
 
                     <div class="card-head">
-                        <!-- <h4 class="card-title">Latest Funding Request</h4> -->
+                         <!-- <h4 class="card-title">Latest Funding Request</h4>  -->
                     </div>
                                 <table class="data-table table table-hover dt-init user-tnx hideTb">
                         <thead>
@@ -174,13 +174,74 @@ include('cookie.php');
                </div>         
           <!-- .card -->
                 </div>
+                
+                <!--Investment Table -->
+                <!-- .card-innr -->
+
+              <div class="card-innr table-responsive">
+                    <div class="card-head">
+                        <h4 class="card-title"> <?php if(isset($transact_date)&&isset($package)&&isset($duration)&&isset($interest)){echo "<h4 class=''>Latest Trading Transactions</h4>";}else{echo "";}?></h4>
+                    </div>
+  <table class="data-table table table-hover dt-init user-tnx hideTb">
+                        <thead>
+                            <tr class="data-item data-head">
+                                <th class="data-col dt-tnxno">Transaction ID</th>
+                                <th class="data-col dt-amount">Package</th>
+                                <th class="data-col dt-amount">Amount</th>
+                                <th class="data-col dt-amount">Duration</th>
+                                <th class="data-col dt-amount">Interest</th>
+                                <th class="data-col dt-account">Status</th>
+                                <th class="data-col dt-type">
+                                    <div class="dt-type-text">Type</div>
+                                </th>
+                                <th class="data-col data-actions">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+
+                                        <tr class="data-item">
+                <td class="data-col dt-tnxno">
+                    <div class="d-flex align-items-center">
+                                                                <div class="fake-class">
+                        <span class="lead tnx-id"><?php if(isset($txn) && $txn!==null){echo $txn;} else{echo"No Trade Transactions Yet";}?></span>
+                            <span class="sub sub-date"><?php if(isset($transact_date) && $transact_date!==null){echo $transact_date;}?></span>
+                        </div>
+                    </div>
+                </td>
+                  <td class="data-col dt-account">
+<span class="lead user-info text-warning"><?php if(isset($package) && $package!==null){echo $package;}?></span>
+                                                    </td>
+                <td class="data-col dt-token">
+                    <span class="lead token-amount"><?php if(isset($amount) && $amount!==null){echo $amount;}?></span>
+                    <span class="sub sub-symbol"><?php if(isset($currency) && $currency!==null){echo strtoupper($currency);}?></span>
+                </td>
+                  <td class="data-col dt-account">
+<span class="lead user-info text-warning"><?php if(isset($duration) && $duration!==null){echo $duration;}?></span>
+                                                    </td>
+                <td class="data-col dt-account">
+<span class="lead user-info text-warning"><?php if(isset($status) && $status!==null){echo $status;}?></span>
+                                                    </td>
+                                                      <td class="data-col dt-account">
+<span class="lead user-info text-warning"><?php if(isset($interest) && $interest!==null){echo $interest;}?></span>
+                                                    </td>
+                <td class="data-col dt-type">
+<?php if(isset($transact_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='dt-type-md badge badge-outline badge-error badge-md'>Trade</span>";}?>
+                    <span class="dt-type-sm badge badge-sq badge-outline badge-success badge-md">T</span>
+                       
+                            </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+                              <!-- .card-innr -->
             </div>
         </div>
+
       <!-- .container -->
   </div>
   <!-- .page-content -->
 </div>
-
 
 
     <div class="footer-bar">
@@ -188,15 +249,17 @@ include('cookie.php');
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-8">
                     <ul class="footer-links">
-                        
-                        <li><a href="https://p2pxtrade.com/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="https://p2pxtrade.com/terms-of-use">Terms & Conditions</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/terms-of-use.php">Terms of Service</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/about.php">About</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/cookie-policy.php">Cookie Policy</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/refund-policy.php">Refund Policy</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/privacy-policy.php">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <!-- .col -->
                 <div class="col-md-4 mt-2 mt-sm-0">
                     <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text">&copy; <?= date('Y'); ?> p2pxtrade - All Rigts Reserved</div>
+                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
                     </div>
                 </div>
                 <!-- .col -->
@@ -216,50 +279,14 @@ include('cookie.php');
     <script src="https://transactright.com/js/app.js"></script>
 <script src="./assets/js/jquery.bundle49f7.js"></script>
 <script src="./assets/js/script49f7.js"></script>
-<!--  <script type="text/javascript">
-        $('#reload').click(function() {
-            $.ajax({
-                type: 'GET',
-                url: '/reload-captcha',
-                success: function(data) {
-                    $(".captcha span").html(data.captcha);
-                }
-            });
-        });
-    </script> -->
- <script src="//code.tidio.co/ylcbkybnqaslgvjzhluenllylwxzgcyl.js" async></script>
-
  <script>
-     function refreshForm(){
-   // let ct = confirm('Confirm your recent transactions');
-   // if(ct==true){
-  //location.reload();
-   //  exit();
-   // }
-   // else{}
-}
-
 window.onload = function() {
     if(!window.location.hash) {
         window.location = window.location + '#loaded';
         window.location.reload();
     }
 }
-
-/* if my "reload" var isn't set locally.. getItem will be false */
-//if (!localStorage.getItem("reload")) {
-    /* set reload to true and then reload the page */
-//     localStorage.setItem("reload", "true");
-//     location.reload();
-// }
-/* after reloading remove "reload" from localStorage */
-// else {
-//     localStorage.removeItem("reload");
-    // localStorage.clear(); // or clear it, instead
-//}
  </script>
-
 </body>
-
 </html>
 

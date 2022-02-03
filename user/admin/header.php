@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="P2PXtrade">
+    <meta name="author" content="Zenith Broker Trade">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="P2PXtrade - Trusted Bitcoin Escrow">
-    <meta name="keywords" content="Escrow, P2P Xtrade" />
+    <meta name="description" content="Zenith Broker Trade - Trusted Trade Partner">
+    <meta name="keywords" content="Escrow, Zenith Broker Trade,p2p" />
 
     <!-- Fav Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="../dist/img/p2pdarkicon.png" />
-    <link rel="icon" type="image/x-icon" href="../dist/img/p2pdarkicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="./dist/img/p2pdarkicon.png" />
+    <link rel="icon" type="image/x-icon" href="./dist/img/p2pdarkicon.png" />
 
     <!-- Site Title  -->
-    <title>Admin - P2P Xtrade</title>
+    <title>Dashboard - Zenith Broker Trade</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../assets/css/custom.css">
@@ -45,5 +45,10 @@
         .p2pBorder{border:1px solid #5867dd !important;}
        .dataTables_info{display: none !important;}
 
+       li > a:hover, .orange{color: #FFAB00 !important;}
+    .bgOrange{background:linear-gradient(to right,#FFAB00,orange,white) !important;}
+    hr{color:#FFAB00;}
+.cursive{font-family:cursive !important;}
     </style>
+
 </head>

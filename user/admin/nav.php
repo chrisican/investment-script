@@ -63,13 +63,6 @@
                             </ul>
                         </li>
 
-                        <li class="has-dropdown page-links-all">
-                            <a class="drop-toggle" href="#"><i class="fa fa-chart-area"></i>Trading Room</a>
-                            <ul class="navbar-dropdown">
-                                <li><a class="p2pText" href="view-room.php">View Rooms</a></li>
-                                <li><a class="p2pText" href="join-room.php">Join Room</a></li>
-                            </ul>
-                        </li>
                         <li><a href="addresses.php"><i class="fa fa-file-invoice-dollar"></i> Addresses</a></li>
                          <li><a href="transactions.php"><i class="fa fa-file-invoice-dollar"></i> Account Transactions</a></li>
                       <!--   <li><a href="#" data-toggle="modal" data-target="#withdrawal-modal"><i class="fa fa-hand-holding-usd"></i> Withdrawal</a></li> -->
@@ -158,7 +151,7 @@
                             <label class="input-item-label">Enter Amount</label>
                             <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
                         </div>
-                        <button type="submit" class="btn btn-primary btn-between" name="fund">
+                        <button type="submit" class="btn btn-warning btn-between" name="fund">
                             Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
@@ -239,7 +232,7 @@
                             <label class="input-item-label">Destination Address</label>
                             <input class="input-bordered" type="text" placeholder="Address" name="address" required value="" />
                         </div>
-                        <button type="submit" class="btn btn-primary btn-between" name="withdraw">Proceed <i class="fa fa-forward"></i></button>
+                        <button type="submit" class="btn btn-warning btn-between" name="withdraw">Proceed <i class="fa fa-forward"></i></button>
                     </form>
                 </div>
             </div>
@@ -268,8 +261,8 @@
                             <label class="input-item-label">Address</label>
                             <input class="input-bordered" type="text" placeholder="Address" name="address" value="<?php ?>" />
                         </div>
-                        <!-- <button type="submit" class="btn btn-primary btn-between" name="withdraw">Proceed <em class="ti ti-wallet"></em></button> -->
-                        <a href="upload-proof.php" class="btn btn-primary btn-between" name="upload-proof"><i class="fa fa-forward">Click To Upload Proof</i></a>
+                        <!-- <button type="submit" class="btn btn-warning btn-between" name="withdraw">Proceed <em class="ti ti-wallet"></em></button> -->
+                        <a href="upload-proof.php" class="btn btn-warning btn-between" name="upload-proof"><i class="fa fa-forward">Click To Upload Proof</i></a>
                     </form>
                 </div>
             </div>

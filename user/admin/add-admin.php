@@ -122,12 +122,12 @@ $con->close();
           <div class="checkbox icheck">
             <label>
               <input type="checkbox" name="agreement" required>
-               I agree to the <a href="https://p2pxtrade.com/terms-of-use.php" title="View terms of use" target="_blank" rel="noopener noreferrer">Terms Of Use</a></label><br>
+               I agree to the <a href="https://zenithbroketrade.org/terms-of-use.php" title="View terms of use" target="_blank" rel="noopener noreferrer">Terms Of Use</a></label><br>
                <span class="err"><?= $checkErr; ?></span>
              </div>
         </div>
         <!-- /.col -->
-          <button type="submit" class="btn btn-primary btn-block btn-flat" name="reg">Sign Up</button>
+          <button type="submit" class="btn btn-warning btn-block btn-flat" name="reg">Sign Up</button>
         </div>
         <!-- /.col --> 
       </div> 

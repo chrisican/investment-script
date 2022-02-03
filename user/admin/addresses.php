@@ -117,14 +117,17 @@ include('../cookie.php');
                 <div class="col-md-8">
                     <ul class="footer-links">
                         
-                        <li><a href="https://p2pxtrade.com/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="https://p2pxtrade.com/terms-of-use">Terms & Conditions</a></li>
+                      <li><a href="https://zenithbrokertrade.org/docs/terms-of-use.php">Terms of Service</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/about.php">About</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/cookie-policy.php">Cookie Policy</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/refund-policy.php">Refund Policy</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/privacy-policy.php">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <!-- .col -->
                 <div class="col-md-4 mt-2 mt-sm-0">
                     <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text">&copy; <?= date('Y'); ?> p2pxtrade - All Rigts Reserved</div>
+                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
                     </div>
                 </div>
                 <!-- .col -->

@@ -6,8 +6,7 @@ include('cookie.php');
 
 //$sessEmail = $_SESSION['email'];
 
-$sql_active_transact = "SELECT * FROM `transaction` WHERE `user_email`='$session_email' 
-AND `status`='active'";
+$sql_active_transact = "SELECT * FROM `transaction` WHERE `user_email`='$session_email' AND `status`='active'";
 $sql_active_exec = $con->query($sql_active_transact);
 $sql_count_active_exec = mysqli_num_rows($sql_active_exec);
 
@@ -21,6 +20,32 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 <div>
 <div class="page-content">
 <div class="container">
+    <div class="row">
+<div class="col-lg-12 col-12">
+<div class="token-information card card-full-height" style="border-radius: 20px;">
+<div class="token-info">
+<h1 class="token-info-head text-light">Select Trading Pack</h1>
+<div class="gaps-2x"></div>
+<h5 class="token-info-sub"> <a href="#starter-pack" data-toggle="modal" data-target="#starter-pack" class="btn btn-sm btn-outline btn-light">
+                                <span class="icon-s"><i data-feather="file"></i></span>
+                                <span>Starter Pack</span>
+                            </a> <a href="#premium-pack" data-toggle="modal" data-target="#premium-pack" class="btn btn-sm btn-outline btn-light">
+                                <span class="icon-s"><i data-feather="file"></i></span>
+                                <span>Premium Pack</span>
+                            </a> <a href="#gold-pack" data-toggle="modal" data-target="#gold-pack" class="btn btn-sm btn-outline btn-light">
+                                <span class="icon-s"><i data-feather="file"></i></span>
+                                <span>Gold Pack</span>
+                            </a>
+                            <a href="#gold-plus" data-toggle="modal" data-target="#gold-plus" class="btn btn-sm btn-outline btn-light">
+                                <span class="icon-s"><i data-feather="file"></i></span>
+                                <span>Gold Plus</span>
+                            </a>
+                        </h5>
+</div>
+</div>
+</div>
+</div>
+
 <div class="row">
 <div class="col-lg-6 col-6">
 <div class="token-information card card-full-height" style="border-radius: 20px;">
@@ -60,13 +85,14 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 
 </div>
 <div class="token-balance token-balance-s2 ">
-<h6 class="card-sub-title">Crypto Balances</h6>
+<h6 class="card-sub-title">Balances</h6>
 <ul class="token-balance-list row">
 
 <li class="token-balance-sub col-md-12 col-lg-6 mb-3"><?php
-    foreach($sql_fund_exec as $fund_info){extract($fund_info);?>
-<span class="lead"><?php if(isset($fund_info['status']) && $fund_info['status']==="approved"){echo $amount;} ?></span>
-<span class="sub"><?php if(isset($fund_info['status']) && $fund_info['status']==="approved"){echo $currency;} ?></span>
+    //foreach($sql_fund_exec as $transact_info){extract($transact_info);
+foreach($sql_exec4 as $transact_info){extract($transact_info);?>
+<span class="lead"><?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $transact_info['amount']." ".$transact_info['currency'];} ?></span>
+<span class="sub"><?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $finalPay;} ?></span>
 <?php } ?>
 </li>
                         </ul>
@@ -101,10 +127,8 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 </script>
 </div>
 <!-- TradingView Widget END -->
+</div> </div>
 </div>
-</div>
-</div>
-
 
 </div>
 <!-- .row -->
@@ -118,30 +142,23 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 <!-- .page-content -->
 </div>
 
-
-
-
-
-
-
-
-
-
-
 <div class="footer-bar">
 <div class="container">
 <div class="row align-items-center justify-content-center">
 <div class="col-md-8">
 <ul class="footer-links">
 
-<li><a href="https://p2pxtrade.com/privacy-policy">Privacy Policy</a></li>
-<li><a href="https://p2pxtrade.com/terms-of-use">Terms & Conditions</a></li>
+ <li><a href="https://zenithbrokertrade.org/docs/terms-of-use.php">Terms of Service</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/about.php">About</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/cookie-policy.php">Cookie Policy</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/refund-policy.php">Refund Policy</a></li>
+        <li><a href="https://zenithbrokertrade.org/docs/privacy-policy.php">Privacy Policy</a></li>
 </ul>
 </div>
 <!-- .col -->
 <div class="col-md-4 mt-2 mt-sm-0">
 <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-<div class="copyright-text">&copy; 2021 P2P Xtrade</div>
+<div class="copyright-text"><p><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
 </div>
 </div>
 <!-- .col -->
@@ -177,7 +194,6 @@ $(".captcha span").html(data.captcha);
 });
 });
 </script> -->
-<script src="//code.tidio.co/ylcbkybnqaslgvjzhluenllylwxzgcyl.js" async></script>
 </body>
 
 </html>

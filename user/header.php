@@ -29,20 +29,20 @@
     <script src="https://kit.fontawesome.com/b1e2cc998d.js" crossorigin="anonymous"></script>
     <style type="text/css">
         .card-token{background-color:#5867dd !important; 
-            background-image:linear-gradient(45deg,#5867dd 0%, #5867dd 100%) !important;}
-        .topbar,.topbar-wrap,.is-sticky,.topbar.is-sticky{background-color:#5867dd !important; 
-            background-image:linear-gradient(45deg,#5867dd 0%, #5867dd 100%) !important;
+            background-image:linear-gradient(45deg,#FFAB00 0%, #5867dd 100%) !important;}
+        .topbar,.topbar-wrap,.is-sticky,.topbar.is-sticky{background-color:#FFAB00 !important; 
+            background-image:linear-gradient(45deg,#FFAB00 0%, #5867dd 100%) !important;
             color:#fff !important;}
-            .token-info-sub,.card-title{color:#5867dd !important; }
+            .token-info-sub,.card-title{color:#FFAB00 !important; }
           /*.toggle-tigger.user-thumb{background-color: transparent !important;}
 */
-           .navbar-menu > li > a{color:#5867dd !important;}
+           .navbar-menu > li > a{color:#FFAB00 !important;}
             .simplebar-scroll-content {margin-bottom: 0px !important;}
         .chat-contacts-title{padding-left: 10px;}
         a.drop-toggle::after{content:none !important;}
-        .p2pBtn{background-color:#5867dd !important; border:1px solid #5867dd !important; color:#fff !important;}
-        .p2pText{color:#5867dd !important;}
-        .p2pBorder{border:1px solid #5867dd !important;}
+        .p2pBtn{background-color:#FFAB00 !important; border:1px solid #5867dd !important; color:#fff !important;}
+        .p2pText{color:#FFAB00 !important;}
+        .p2pBorder{border:1px solid #FFAB00 !important;}
        .dataTables_info{display: none !important;}
 
        /*Tooltip on view-addresses page*/
