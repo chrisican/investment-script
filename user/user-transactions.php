@@ -17,8 +17,8 @@ include('cookie.php');
             <div class="card content-area">
                 <table class="table" style="width:50% !important; margin:auto;">
 <tr>
-    <td class="col-md-6"> <span class="btnTarget"><center><a href="" data-toggle="modal" data-target="#view-address" class="dt-type-md"><?php if(isset($request_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='btn btn-primary btn-md'>Make Payment</span>";}?></a></center></span></td>
-    <td class="col-md-6"> <span class="btnTarget"><center><a href="upload-proof.php" data-toggle="" data-target="" class="dt-type-md"><?php if(isset($request_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='btn btn-primary btn-md'>Upload Proof</span>";}?></a></center></span></td>
+    <td class="col-md-6"> <span class="btnTarget"><center><a href="" data-toggle="modal" data-target="#view-address" class="dt-type-md"><?php if(isset($transact_date)&&isset($transact_info['amount'])&&isset($transact_info['currency'])&&isset($transact_info['status'])){echo "<span class='btn btn-primary btn-md'>Make Payment</span>";}?></a></center></span></td>
+    <td class="col-md-6"> <span class="btnTarget"><center><a href="upload-proof.php" data-toggle="" data-target="" class="dt-type-md"><?php if(isset($transact_date)&&isset($transact_info['amount'])&&isset($transact_info['currency'])&&isset($transact_info['status'])){echo "<span class='btn btn-primary btn-md'>Upload Proof</span>";}?></a></center></span></td>
 </tr>
 </table>
 
@@ -28,7 +28,7 @@ include('cookie.php');
                     <div class="card-head">
                          <!-- <h4 class="card-title">Latest Funding Request</h4>  -->
                     </div>
-                                <table class="data-table table table-hover dt-init user-tnx hideTb">
+                              <!--   <table class="data-table table table-hover dt-init user-tnx hideTb">
                         <thead>
                              
                             <tr class="data-item data-head">
@@ -37,14 +37,14 @@ include('cookie.php');
                                 <th class="data-col dt-account">Status</th>
                                 <th class="data-col dt-type">
                                     <div class="dt-type-text">Type</div>
-                                </th>
+                                </th>-->
                                <!--  <th class="data-col data-actions">
                                      <div class="dt-type-text">Payment and Proof</div>
                                 </th> -->
-                            </tr>
+                           <!-- </tr>
                         </thead>
-                        <tbody>
-                                                        <tr class="data-item">
+                        <tbody> -->
+                                                      <tr class="data-item">
                     <td class="data-col dt-tnxno">
                         <div class="d-flex align-items-center">
         <!-- <div class="data-state data-state-pending">
@@ -57,14 +57,14 @@ include('cookie.php');
                         </div>
                     </td>
                                 <td class="data-col dt-token">
-                                    <span class="lead token-amount"><?php if(isset($amount) && $amount!==null){echo $amount;}?></span>
-                                    <span class="sub sub-symbol"><?php if(isset($currency) && $currency!==null){echo strtoupper($currency);}?></span>
+                                    <span class="lead token-amount"><?php //if(isset($amount) && $amount!==null){echo $amount;}?></span>
+                                    <span class="sub sub-symbol"><?php //if(isset($currency) && $currency!==null){echo strtoupper($currency);}?></span>
                                 </td>
                             <td class="data-col dt-tnxno">
- <span class="lead user-info text-white text-center bg-warning w-50"><?php if(isset($status) && $status!==null){echo $status;}?></span>                                        </td>
+ <span class="lead user-info text-white text-center bg-warning w-50"><?php //if(isset($status) && $status!==null){echo $status;}?></span>                                        </td>
                     <td class="data-col dt-type">
-        <?php if(isset($request_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='dt-type-md badge badge-outline badge-success badge-md'>Credit</span>";}?>
-        <span class="dt-type-sm badge badge-sq badge-outline badge-success badge-md ">C</span></td>
+        <?php //if(isset($request_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='dt-type-md badge badge-outline badge-success badge-md'>Credit</span>";}?>
+        <!-- <span class="dt-type-sm badge badge-sq badge-outline badge-success badge-md ">C</span></td> -->
                             </tr>
                                                     </tbody>
                     </table>
@@ -189,7 +189,7 @@ include('cookie.php');
                                 <th class="data-col dt-amount">Package</th>
                                 <th class="data-col dt-amount">Amount</th>
                                 <th class="data-col dt-amount">Duration</th>
-                                <th class="data-col dt-amount">Interest</th>
+                               <!--  <th class="data-col dt-amount">Interest</th> -->
                                 <th class="data-col dt-account">Status</th>
                                 <th class="data-col dt-type">
                                     <div class="dt-type-text">Type</div>
@@ -214,20 +214,18 @@ include('cookie.php');
 <span class="lead user-info text-warning"><?php if(isset($package) && $package!==null){echo $package;}?></span>
                                                     </td>
                 <td class="data-col dt-token">
-                    <span class="lead token-amount"><?php if(isset($amount) && $amount!==null){echo $amount;}?></span>
-                    <span class="sub sub-symbol"><?php if(isset($currency) && $currency!==null){echo strtoupper($currency);}?></span>
+                    <span class="lead token-amount"><?php if(isset($transact_info['amount']) && $transact_info['amount']!==null){echo $transact_info['amount'];}?></span>
+                    <span class="sub sub-symbol"><?php if(isset($transact_info['currency']) && $transact_info['currency']!==null){echo strtoupper($transact_info['currency']);}?></span>
                 </td>
                   <td class="data-col dt-account">
 <span class="lead user-info text-warning"><?php if(isset($duration) && $duration!==null){echo $duration;}?></span>
                                                     </td>
                 <td class="data-col dt-account">
-<span class="lead user-info text-warning"><?php if(isset($status) && $status!==null){echo $status;}?></span>
+<span class="lead user-info text-warning"><?php if(isset($transact_info['status']) && $transact_info['status']!==null){echo $transact_info['status'];}?></span>
                                                     </td>
-                                                      <td class="data-col dt-account">
-<span class="lead user-info text-warning"><?php if(isset($interest) && $interest!==null){echo $interest;}?></span>
-                                                    </td>
+                                            
                 <td class="data-col dt-type">
-<?php if(isset($transact_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='dt-type-md badge badge-outline badge-error badge-md'>Trade</span>";}?>
+<?php if(isset($transact_date)&&isset($transact_info['amount'])&&isset($transact_info['currency'])&&isset($transact_info['status'])){echo "<span class='dt-type-md badge badge-outline badge-error badge-md'>Trade</span>";}?>
                     <span class="dt-type-sm badge badge-sq badge-outline badge-success badge-md">T</span>
                        
                             </tr>

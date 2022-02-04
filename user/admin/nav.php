@@ -58,7 +58,8 @@
                         <li class="has-dropdown page-links-all">
                             <a class="drop-toggle" href="#"><i class="fa fa-chart-area"></i>Account Requests</a>
                             <ul class="navbar-dropdown">
-                                <li><a class="p2pText" href="funding-requests.php">Funding Requests</a></li>
+                               <!--  <li><a class="p2pText" href="funding-requests.php">Funding Requests</a></li> -->
+                                 <li><a class="p2pText" href="transactions.php">Trade Requests</a></li> 
                                 <li><a class="p2pText" href="withdraw-requests.php">Withdraw Requests</a></li>
                             </ul>
                         </li>

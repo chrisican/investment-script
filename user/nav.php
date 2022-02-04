@@ -51,14 +51,14 @@
                         <li><a href="#" data-toggle="modal" data-target="#withdrawal-modal"><i class="fa fa-hand-holding-usd"></i> Withdrawal</a></li>
                          <li><a href="https://zenithbrokertrade.org/user/logout.php"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
-                    <ul class="navbar-btns">
+                    <!-- <ul class="navbar-btns">
                         <li>
                             <a href="#" data-toggle="modal" data-target="#crypto-fund-modal" class="btn btn-sm btn-outline btn-light">
                                 <span class="icon-s"><i data-feather="file"></i></span>
                                 <span>Fund Account</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <!-- .navbar-innr -->
             </div>
@@ -206,13 +206,7 @@
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
                             </div></div>
-         
-                       <!--  <div class="input-item input-with-label">
-                            <label class="input-item-label">Enter Amount</label>
-                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
-                        </div> -->
-                        <button type="submit" class="btn btn-warning btn-between" name="starter">
-                            Proceed <i class="fa fa-forward"></i>
+            <button type="submit" class="btn btn-warning btn-between" name="starter">Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
                 </div>
@@ -241,17 +235,14 @@
                            </tr></table>
                             </div>
                         </div>    
+                         <div class="input-item input-with-label">
+                            <label class="input-item-label">Select currency to fund</label>
                             <div class="select-wrapper">
                                 <select class="input-bordered" name="currency_id">
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div>
-                        
-                        <div class="input-item input-with-label">
-                            <label class="input-item-label">Enter Amount</label>
-                            <input class="input-bordered" type="text" placeholder="Amount" name="premium" required />
-                        </div>
+                            </div></div>
                         <button type="submit" class="btn btn-warning btn-between" name="premium">
                             Proceed <i class="fa fa-forward"></i>
                         </button>
@@ -282,19 +273,15 @@
                            </tr></table>
                             </div>
                         </div>    
+                         <div class="input-item input-with-label">
+                            <label class="input-item-label">Select currency to fund</label>
                             <div class="select-wrapper">
                                 <select class="input-bordered" name="currency_id">
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div>
-                        
-                        <div class="input-item input-with-label">
-                            <label class="input-item-label">Enter Amount</label>
-                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
-                        </div>
-                        <button type="submit" class="btn btn-warning btn-between" name="goldpack">
-                            Proceed <i class="fa fa-forward"></i>
+                            </div></div>
+                        <button type="submit" class="btn btn-warning btn-between" name="goldpack">Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
                 </div>
@@ -323,18 +310,15 @@
                            </tr></table>
                             </div>
                         </div>    
+                         <div class="input-item input-with-label">
+                            <label class="input-item-label">Select currency to fund</label>
                             <div class="select-wrapper">
                                 <select class="input-bordered" name="currency_id">
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div>
-                        <div class="input-item input-with-label">
-                            <label class="input-item-label">Enter Amount</label>
-                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
-                        </div>
-                        <button type="submit" class="btn btn-warning btn-between" name="goldplus">
-                            Proceed <i class="fa fa-forward"></i>
+                            </div></div>
+                        <button type="submit" class="btn btn-warning btn-between" name="goldplus">Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
                 </div>
@@ -360,5 +344,4 @@
   document.getElementById('displayText').innerHTML = "Address copied";
 
 }
-
     </script>

@@ -52,7 +52,7 @@ $sql_starter_update = "INSERT INTO transaction(txn,user_email,package,amount,cur
       echo "<script>alert('Your starter plan request is submitted and is pending approval. Do not resubmit request.')</script>";
   echo"<script>location.href='user-transactions.php'</script>";
   //header("Refresh:1,url=user-transactions.php");
-}
+}}
 
 
 if(isset($_POST['premium'])){
@@ -69,7 +69,7 @@ $sql_starter_update = "INSERT INTO transaction(txn,user_email,package,amount,cur
       echo "<script>alert('Your premium plan request is submitted and is pending approval. Do not resubmit request.')</script>";
   echo"<script>location.href='user-transactions.php'</script>";
   //header("Refresh:1,url=user-transactions.php");
-}
+}}
 
 
 if(isset($_POST['goldpack'])){
@@ -86,7 +86,7 @@ $sql_starter_update = "INSERT INTO transaction(txn,user_email,package,amount,cur
       echo "<script>alert('Your Gold Pack plan request is submitted and is pending approval. Do not resubmit request.')</script>";
   echo"<script>location.href='user-transactions.php'</script>";
   //header("Refresh:1,url=user-transactions.php");
-}
+}}
 
 if(isset($_POST['goldplus'])){
   //Extract variables from user input
@@ -102,6 +102,6 @@ $sql_starter_update = "INSERT INTO transaction(txn,user_email,package,amount,cur
       echo "<script>alert('Your Gold Plus plan request is submitted and is pending approval. Do not resubmit request.')</script>";
   echo"<script>location.href='user-transactions.php'</script>";
   //header("Refresh:1,url=user-transactions.php");
-}
+}}
 $con->close();
 ?>

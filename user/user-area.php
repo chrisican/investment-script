@@ -6,7 +6,7 @@ include('cookie.php');
 
 //$sessEmail = $_SESSION['email'];
 
-$sql_active_transact = "SELECT * FROM `transaction` WHERE `user_email`='$session_email' AND `status`='active'";
+$sql_active_transact = "SELECT * FROM `transaction` WHERE `user_email`='$session_email' AND `status`='approved'";
 $sql_active_exec = $con->query($sql_active_transact);
 $sql_count_active_exec = mysqli_num_rows($sql_active_exec);
 
@@ -85,14 +85,24 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 
 </div>
 <div class="token-balance token-balance-s2 ">
-<h6 class="card-sub-title">Balances</h6>
+<h6 class="card-sub-title">Trade summary</h6>
 <ul class="token-balance-list row">
 
 <li class="token-balance-sub col-md-12 col-lg-6 mb-3"><?php
     //foreach($sql_fund_exec as $transact_info){extract($transact_info);
 foreach($sql_exec4 as $transact_info){extract($transact_info);?>
 <span class="lead"><?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $transact_info['amount']." ".$transact_info['currency'];} ?></span>
-<span class="sub"><?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $finalPay;} ?></span>
+
+<span class="sub">Date Approved:&nbsp;<?php if(isset($transact_date) && $transact_date!==null){echo $transact_date;} ?></span>
+
+<span><big>Package:</big>&nbsp;<?php if(isset($package) && $package!==null){
+            echo $package; }?></span>&nbsp;&nbsp;
+
+<span><big>Duration:</big>&nbsp;<?php if(isset($duration) && $duration!==null){
+            echo $duration." days"; }?></span><br>
+
+<span><big>Due date:</big>&nbsp;<?php if(isset($transact_date) && isset($duration)){echo date('Y-m-d', strtotime($transact_date . + ($duration - 2) .'days'));}?></span><br>
+<span><big>Expected Profit:</big>&nbsp; <?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $transact_info['amount'] *$interest / $duration ;} ?></span><br>
 <?php } ?>
 </li>
                         </ul>
@@ -183,17 +193,9 @@ foreach($sql_exec4 as $transact_info){extract($transact_info);?>
 <script src="https://transactright.com/js/app.js"></script>
 <script src="./assets/js/jquery.bundle49f7.js"></script>
 <script src="./assets/js/script49f7.js"></script>
-<!-- <script type="text/javascript">
-$('#reload').click(function() {
-$.ajax({
-type: 'GET',
-url: 'https://transactright.com/reload-captcha',
-success: function(data) {
-$(".captcha span").html(data.captcha);
-}
-});
-});
-</script> -->
+
+<script src="//code.tidio.co/4amhwb6g67tepvxrle85xmbmlwjyunkk.js" async></script>
 </body>
 
 </html>
+

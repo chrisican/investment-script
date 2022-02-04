@@ -42,6 +42,4 @@ function isAdmin(){
         return false;
     }
 }
-
-
 ?>

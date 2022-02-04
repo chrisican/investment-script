@@ -69,10 +69,14 @@
             <li><a href="5">Road Map</a></li>
             <li><a href="6">Investments</a></li>
             <li><a href="7">Testimonial</a></li>
+            <li><img src="images/icons/12.png" alt=""/></li>
     </ul>
 </nav>
 <div class="language">
-    <span class="lng-in"><img src="images/icons/12.png" alt=""/></span>
+    <span class="lng-in">
+        <a class="btn btn-warning text-white" href="tel:+447418343730"><big><strong><i class="fa fa-phone" title="Call us"></i></strong></big></a>
+        
+    </span>
     <!-- <ul class="lng-out">
         <li><img src="images/icons/12.png" alt="" /></li>
         <li><img src="images/icons/12.png" alt="" /></li>
@@ -110,7 +114,7 @@
     </div>
 </div>
 <div id="sidebar">
-    <h1><a href="#">Zenith Broker Trade</a></h1>
+    <h1><a class="cursive" href="#">ZenithBroker<span class="orange">Trade</span></a></h1>
     <div id="toggle_close">&times;</div>
     <div id='cssmenu' class="wd_single_index_menu">
         <ul>
@@ -122,6 +126,7 @@
             <li><a href="5">Road Map</a></li>
             <li><a href="6">Investments</a></li>
             <li><a href="7">Testimonial</a></li>
+             <li><a href="tel:+447418343730">Contact us&nbsp;<i class="fa fa-phone"></i></a></li>
         </ul>
     </div>
 </div>
@@ -153,8 +158,9 @@
                         <li data-animation="animated bounceInDown" class="slider_social_icon1"><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li data-animation="animated bounceInDown" class="slider_social_icon2"><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li data-animation="animated bounceInDown" class="slider_social_icon3"><a href="#"><i class="fa fa-send-o"></i></a></li>
-                        <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="#"><i class="fa fa-bitcoin"></i></a></li>
+                       <!--  <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="#"><i class="fa fa-bitcoin"></i></a></li> -->
                         <li data-animation="animated bounceInDown" class="slider_social_icon5"><a href="mailto:support@zenithbrokertrade.org"><i class="fa fa-envelope"></i></a></li>
+                        <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="tel:+447418343730"><i class="fa fa-phone"></i></a></li>
                     </ul>
                     <h2 data-animation="animated bounceInLeft">Zenith Broker <span class="orange">Trade</span> -<br>Biggest Crypto Trading Platform</h2>
                     <div class="buttons">
@@ -201,8 +207,9 @@
                     <li data-animation="animated bounceInDown" class="slider_social_icon1"><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li data-animation="animated bounceInDown" class="slider_social_icon2"><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li data-animation="animated bounceInDown" class="slider_social_icon3"><a href="#"><i class="fa fa-send-o"></i></a></li>
-                    <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="#"><i class="fa fa-bitcoin"></i></a></li>
+                    <!-- <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="#"><i class="fa fa-bitcoin"></i></a></li> -->
                     <li data-animation="animated bounceInDown" class="slider_social_icon5"><a href="mailto:support@zenithbrokertrade.org"><i class="fa fa-envelope"></i></a></li>
+                     <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="tel:+447418343730"><i class="fa fa-phone"></i></a></li>
                 </ul>
                 <h2 data-animation="animated bounceInLeft">Zenith Broker <span class="orange">Trade</span> - <br>Biggest Trading Plans</h2>
                 <div class="buttons">
@@ -353,7 +360,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="section-heading2 wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">
-    <h2>The Best Of Features</h2>
+    <h2>Trading Features</h2>
 </div>
 </div>
 </div>
@@ -467,7 +474,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 <div class="section-heading">
-<h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">The Most Trusted Cryptocurrency Platform</h2>
+<h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">The Most Trusted Cryptocurrency Trading Platform</h2>
 </div>
 </div>
 </div>
@@ -551,7 +558,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="videos-heding">
-    <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Development of Zenith Broker <span class="orange">Trade</span> Platform<br>(Road Map)</h2>
+    <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Development of Zenith Broker <span class="orange">Trade</span><br>(Road Map)</h2>
     <div class="videos-box">
         <video id="my-video" class="video-js" controls preload="auto" width="770" height="400" poster="images/video/1.png" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://youtu.be/Gc2en3nHxA4"}], "youtube": { "customVars": { "wmode": "transparent" } } }'>
         </video>
@@ -1268,7 +1275,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
             <li class="wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;"><a class="bgOrange" href="#"><i class="fa fa-facebook"></i></a></li>
             <li class="wow  fadeInUp animated" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5; animation-name: fadeInUp;"><a class="bgOrange" href="#"><i class="fa fa-twitter"></i></a></li>
             <li class="wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeInUp;"><a class="bgOrange" href="#"><i class="fa fa-send-o"></i></a></li>
-            <li class="wow  fadeInUp animated" data-wow-duration="2.1s" style="visibility: visible; animation-duration: 2.1s; animation-name: fadeInUp;"><a class="bgOrange" href="#"><i class="fa fa-bitcoin"></i></a></li>
+            <!-- <li class="wow  fadeInUp animated" data-wow-duration="2.1s" style="visibility: visible; animation-duration: 2.1s; animation-name: fadeInUp;"><a class="bgOrange" href="#"><i class="fa fa-bitcoin"></i></a></li> -->
             <li class="wow  fadeInUp animated" data-wow-duration="2.4s" style="visibility: visible; animation-duration: 2.4s; animation-name: fadeInUp;"><a class="bgOrange" href="mailto:support@zenithbrokertrade.org"><i class="fa fa-envelope"></i></a></li>
         </ul>
         <div class="row">
@@ -1294,7 +1301,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="copyright wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">
-    <p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p>
+    <p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.&nbsp;Zenith Broker Trade is the easiest place to trade Bitcoin.</small></center></p>
 </div>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1348,6 +1355,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <script src="js/Youtube.min.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
+<script src="//code.tidio.co/4amhwb6g67tepvxrle85xmbmlwjyunkk.js" async></script>
 </body>
 
 </html>

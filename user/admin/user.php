@@ -51,8 +51,9 @@ if(isset($_GET['vu']) || isset($_GET['va'])){$vu = @$_GET['vu']; $va = @$_GET['v
 <?php 
 if(isset($_GET['at']) && $_GET['at']!==null){
 	$at = $_GET['at'];
+    $dateToday = date("Y-m-d");
 	echo"<script>window.alert('Transactions should be marked as approved only once. Click OK to proceed')</script>";
-	$vTransaction ="UPDATE `transaction` SET `status`='approved' WHERE `txn`='$at'";
+	$vTransaction ="UPDATE `transaction` SET `status`='approved',`transact_date`='$dateToday' WHERE `txn`='$at'";
 	if($con->query($vTransaction)){echo "<script>location.href='transactions.php'</script>";}
 	else{header('Location:transactions.php');}
    }

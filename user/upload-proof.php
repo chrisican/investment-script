@@ -53,7 +53,7 @@ $con->close();
         </div>
 
                         
-        <h4 class="p2pText">Transaction ID: <?php if(isset($ftxn) && $ftxn!==null){echo $ftxn;}?></h4>
+        <h4 class="p2pText">Transaction ID: <?php if(isset($txn) && $txn!==null){echo $txn;}?></h4>
 
         <div class="form">
           <form action="<?= htmlentities($_SERVER['PHP_SELF']); ?>" method="post" class="form" enctype="multipart/form-data">
@@ -73,7 +73,7 @@ $con->close();
             <br />
 
             <div class="form-btn-group">
-              <button type="submit" class="btn p2pBtn" name="proofUpload">Submit</button>
+              <button type="submit" class="btn btn-warning" name="proofUpload">Submit</button>
             </div>
           </form>
           

@@ -21,9 +21,10 @@ if(isset($_POST['user']) && isset($_POST['signin'])){
 	//echo $_SESSION['email']; //<-For testing
 	//echo $user_session_email; //<-For testing
 	if(!isset($_SESSION['email'])){
-		header('Location:login.php');
+	header('Location:login.php');
 	}
 }
+
 if(isset($_SESSION['email']) && $_SESSION['email']!==null){
 	//$session_email = $_SESSION['email'];
 	$GLOBALS['session_email'] = $_SESSION['email'];

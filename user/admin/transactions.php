@@ -16,22 +16,22 @@ include('../cookie.php');
             <div class="card content-area">
                                 <div class="card-innr table-responsive">
                     <div class="card-head">
-                        <h4 class="card-title">Update Addresses</h4>
+                        <h4 class="card-title">Trade Transactions</h4>
                     </div>
                                 <table class="data-table table table-hover dt-init user-tnx">
                         <thead>
                             <tr class="data-item data-head">
                                 <th class="data-col dt-tnxno">TXN</th>
                                 <th class="data-col dt-amount">Email</th>
-                                <th class="data-col dt-account">First Currency</th>
+                                <th class="data-col dt-account">Package</th>
                                 <th class="data-col dt-type">
-                                    <div class="dt-type-text">Second Currency</div>
+                                    <div class="dt-type-text">Amount</div>
                                 </th>
                                  <th class="data-col dt-type">
-                                    <div class="dt-type-text">Seller Amount</div>
+                                    <div class="dt-type-text">Currency</div>
                                 </th>
                                  <th class="data-col dt-type">
-                                    <div class="dt-type-text">Buyer Amount</div>
+                                    <div class="dt-type-text">Duration</div>
                                 </th>
                                 <th class="data-col dt-type">
                                     <div class="dt-type-text">Role</div>
@@ -71,22 +71,22 @@ include('../cookie.php');
                                 </td>
 
                                  <td class="data-col dt-token">
-                                    <span class="lead token-amount"><?php if(isset($first_cur) && $first_cur!==null){echo $first_cur;}?></span>
+                                    <span class="lead token-amount"><?php if(isset($package) && $package!==null){echo $package;}?></span>
                                   <!--   <span class="sub sub-symbol"></span> -->
                                 </td>
 
                                  <td class="data-col dt-token">
-                                    <span class="lead token-amount"><?php if(isset($second_cur) && $second_cur!==null){echo $second_cur;}?></span>
+                                    <span class="lead token-amount"><?php if(isset($inft['amount']) && $inft['amount']!==null){echo $inft['amount'];}?></span>
                                   <!--   <span class="sub sub-symbol"></span> -->
                                 </td>
 
                                  <td class="data-col dt-token">
-                                    <span class="lead token-amount"><?php if(isset($seller_amount) && $seller_amount!==null){echo $seller_amount;}?></span>
+                                    <span class="lead token-amount"><?php if(isset($inft['currency']) && $inft['currency']!==null){echo $inft['currency'];}?></span>
                                   <!--   <span class="sub sub-symbol"></span> -->
                                 </td>
 
  <td class="data-col dt-token">
-                                    <span class="lead token-amount"><?php if(isset($buyer_amount) && $buyer_amount!==null){echo $buyer_amount;}?></span>
+                                    <span class="lead token-amount"><?php if(isset($duration) && $duration!==null){echo $duration .' days';}?></span>
                                   <!--   <span class="sub sub-symbol"></span> -->
                                 </td>
 
@@ -158,17 +158,6 @@ include('../cookie.php');
     <script src="https://transactright.com/js/app.js"></script>
 <script src="../assets/js/jquery.bundle49f7.js"></script>
 <script src="../assets/js/script49f7.js"></script>
-       <!--  <script type="text/javascript">
-        $('#reload').click(function() {
-            $.ajax({
-                type: 'GET',
-                url: '/reload-captcha',
-                success: function(data) {
-                    $(".captcha span").html(data.captcha);
-                }
-            });
-        });
-    </script> -->
 <!-- Toastr -->
 <script src="dist/js/toastr.min.js"></script>
 <script type="text/javascript">

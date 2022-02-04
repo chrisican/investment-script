@@ -72,33 +72,33 @@ if(isset($_POST['reg'])){
   $sqlC = $con->query($sqlIns);
  if($sqlC){
   //Load Composer's autoloader
-require 'admin/vendor/autoload.php';
+// require 'admin/vendor/autoload.php';
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+// //Create an instance; passing `true` enables exceptions
+// $mail = new PHPMailer(true);
 
-try {
-    //Server settings
-    $mail->SMTPDebug = 0;
-    $mail->isSMTP();
-    $mail->Host = 'zenithbrokertrade.org'; 
-    $mail->SMTPAuth   = true; 
-    $mail->Username   = 'support@zenithbrokertrade.org'; 
-    $mail->Password   = '#SUPPORTmail99'; 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port  = 465; 
+// try {
+//     //Server settings
+//     $mail->SMTPDebug = 0;
+//     $mail->isSMTP();
+//     $mail->Host = 'zenithbrokertrade.org'; 
+//     $mail->SMTPAuth   = true; 
+//     $mail->Username   = 'noreply@zenithbrokertrade.org'; 
+//     $mail->Password   = '#NOREPLYmail99'; 
+//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+//     $mail->Port  = 465; 
 
-    //Recipients
-    $mail->setFrom('noreply@zenithbrokertrade.org', 'Zenith Broker Trade');
-    $mail->addAddress('admin@zenithbrokertrade.org');
-    $mail->isHTML(true);
-    $mail->Subject = 'You have a new member';
-    $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. https://zenithbrokertrade.org/user/admin/login.php';
-    $mail->AltBody = 'A new member has just registered on the platform. Login to the admin dashboard to see this person';
-    $mail->send();
-} catch (Exception $e){echo " ";}
+//     //Recipients
+//     $mail->setFrom('noreply@zenithbrokertrade.org', 'Zenith Broker Trade');
+//     $mail->addAddress('admin@zenithbrokertrade.org');
+//     $mail->isHTML(true);
+//     $mail->Subject = 'You have a new member';
+//     $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. https://zenithbrokertrade.org/user/admin/login.php';
+//     $mail->AltBody = 'A new member has just registered on the platform. Login to the admin dashboard to see this person';
+//     $mail->send();
+// } catch (Exception $e){echo " ";}
 
-  $toast = "success";header("Refresh:2,url=preloader.php?fn=$fname&em=$email");
+  $toast = "success";//header("Refresh:2,url=preloader.php?fn=$fname&em=$email");
 }else{$toast = "fail";} 
 }
 }}
