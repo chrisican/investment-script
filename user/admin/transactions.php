@@ -34,6 +34,9 @@ include('../cookie.php');
                                     <div class="dt-type-text">Duration</div>
                                 </th>
                                 <th class="data-col dt-type">
+                                    <div class="dt-type-text">Due date</div>
+                                </th>
+                                <th class="data-col dt-type">
                                     <div class="dt-type-text">Role</div>
                                 </th>
                                 <th class="data-col dt-type">
@@ -89,6 +92,10 @@ include('../cookie.php');
                                     <span class="lead token-amount"><?php if(isset($duration) && $duration!==null){echo $duration .' days';}?></span>
                                   <!--   <span class="sub sub-symbol"></span> -->
                                 </td>
+
+                                 <td class="data-col dt-account">
+            <span class="lead user-info"><?php if(isset($transact_date) && isset($duration)){echo date('Y-m-d', strtotime($transact_date . + ($duration - 2) .'days'));}?></span>
+        </td>
 
 
                                 <td class="data-col dt-account" id="td_approve">
@@ -161,7 +168,7 @@ include('../cookie.php');
 <!-- Toastr -->
 <script src="dist/js/toastr.min.js"></script>
 <script type="text/javascript">
-  toastr.info('View and manage transactions from your users','Info');
+  toastr.info('View and manage trade transactions from your users','Info');
 </script>
     </body>
     </html>

@@ -35,6 +35,9 @@ $folder_image = "../upload/";
                                     <div class="dt-type-text">Comment</div>
                                 </th>
                                 <th class="data-col data-actions">
+                                    <div class="dt-type-text">Edit</div>
+                                </th>
+                                <th class="data-col data-actions">
                                     <div class="dt-type-text">Approve</div>
                                 </th>
                                 <th class="data-col data-actions">
@@ -65,7 +68,7 @@ $folder_image = "../upload/";
                                     <span class="sub sub-symbol"><?php if(isset($currency) && $currency!==null){echo strtoupper($currency);}?></span>
                                 </td>
                                 <td class="data-col dt-account" id="td_approve">
-     <span class="lead user-info text-warning"><?php if(isset($status) && $status!==null){echo $status;}?></span>
+     <?php if(isset($status) && $status!==null){if($status==="pending"){echo "<span class='lead user-info text-danger'>{$status}</span>";}else{echo "<span class='lead user-info text-success'>{$status}</span>";}}?><!-- </span> -->
                                                                     </td>
                                 <td class="data-col dt-type">
                     <?php if(isset($request_date)&&isset($amount)&&isset($currency)&&isset($status)){echo "<span class='dt-type-md badge badge-outline badge-success badge-md'>Credit</span>";}?>
@@ -81,13 +84,19 @@ $folder_image = "../upload/";
                     <?php if(isset($fcomment) && $fcomment!==null){echo $fcomment;}else{echo"N/A";}?>
                                     <span class="dt-type-sm badge badge-sq badge-outline badge-success badge-md">Comment</span>
                                                 </td>
+                                                 <td class="data-col dt-type">
+                            <a href="edit-amount.php?af=<?=$ftxn;?>" data-toggle="" data-target="" class="dt-type-md"><span class='badge badge-outline badge-info badge-md'>Edit</span></a>
+                            <a href="edit-amount.php?af=<?=$ftxn;?>" data-toggle="" data-target="" class="dt-type-sm badge badge-sq badge-outline badge-info badge-md">E</a>
+                        </td>
+
                         <td class="data-col dt-type">
                             <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-md"><span class='badge badge-outline badge-info badge-md'>Approve</span></a>
-                            <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-info badge-md">Approve</a>
+                            <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-info badge-md">A</a>
                         </td>
+
                         <td class="data-col dt-type">
                             <a name="delete" href="user.php?df=<?= $ftxn; ?>" class="dt-type-md"><span class='badge badge-outline badge-primary badge-md'>Delete</span></a>
-                            <a href="user.php?df=<?= $ftxn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-primary badge-md">Delete</a>
+                            <a href="user.php?df=<?= $ftxn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-primary badge-md">D</a>
                         </td>
                             </tr>
                         <?php }?>

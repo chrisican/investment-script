@@ -72,7 +72,9 @@ if(isset($_GET['af']) && $_GET['af']!==null){
 	$af = $_GET['af'];
 	echo"<script>window.alert('Fund requests should be marked as approved only once. Click OK to proceed')</script>";
 	$approve_fund ="UPDATE `fund` SET `status`='approved' WHERE `ftxn`='$af'";
-	if($con->query($approve_fund)){echo "<script>location.href='funding-requests.php'</script>";}
+	if($con->query($approve_fund)){
+        echo "<script>location.href='funding-requests.php'</script>";
+    }
 	else{header('Location:funding-requests.php');}
    }
 
@@ -81,6 +83,22 @@ if(isset($_GET['af']) && $_GET['af']!==null){
 	echo"<script>window.alert('Click the OK button to permanently delete this fund request')</script>";
 	$fund_request_delete ="DELETE FROM `fund` WHERE `ftxn`='$df'";
 	if($con->query($fund_request_delete)){echo "<script>location.href='funding-requests.php'</script>";}else{header('Location:funding-requests.php');}
+   }
+   ?>
+
+    <?php 
+if(isset($_GET['amt']) && $_GET['amt']!==null){
+    $amt = $_GET['amt'];
+    $approve_fund ="UPDATE `fund` SET `status`='approved' WHERE `ftxn`='$af'";
+    if($con->query($approve_fund)){echo "<script>location.href='funding-requests.php'</script>";}
+    else{header('Location:funding-requests.php');}
+   }
+
+   if(isset($_GET['df']) && $_GET['df']!==null){
+    $df = $_GET['df'];
+    echo"<script>window.alert('Click the OK button to permanently delete this fund request')</script>";
+    $fund_request_delete ="DELETE FROM `fund` WHERE `ftxn`='$df'";
+    if($con->query($fund_request_delete)){echo "<script>location.href='funding-requests.php'</script>";}else{header('Location:funding-requests.php');}
    }
    ?>
 

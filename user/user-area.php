@@ -84,26 +84,33 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 <div class="token-balance token-balance-with-icon">
 
 </div>
-<div class="token-balance token-balance-s2 ">
-<h6 class="card-sub-title">Trade summary</h6>
+<div class="token-balance token-balance-s2">
+<h3 class="card-sub-title">Summary of deposits</h3>
 <ul class="token-balance-list row">
+<li class="token-balance-sub col-md-12 col-lg-6 mb-3" hidden><?php
+    foreach($sql_withdraw_exec as $withdraw_info){extract($withdraw_info);?>
+<span class="lead"><?php if(isset($withdraw_info['wstatus']) && $withdraw_info['wstatus']==="approved"){} ?></span>
+<span class="sub"><?php if(isset($withdraw_info['wstatus']) && $withdraw_info['wstatus']==="approved"){}?></span>
 
-<li class="token-balance-sub col-md-12 col-lg-6 mb-3"><?php
-    //foreach($sql_fund_exec as $transact_info){extract($transact_info);
-foreach($sql_exec4 as $transact_info){extract($transact_info);?>
-<span class="lead"><?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $transact_info['amount']." ".$transact_info['currency'];} ?></span>
-
-<span class="sub">Date Approved:&nbsp;<?php if(isset($transact_date) && $transact_date!==null){echo $transact_date;} ?></span>
-
-<span><big>Package:</big>&nbsp;<?php if(isset($package) && $package!==null){
-            echo $package; }?></span>&nbsp;&nbsp;
-
-<span><big>Duration:</big>&nbsp;<?php if(isset($duration) && $duration!==null){
-            echo $duration." days"; }?></span><br>
-
-<span><big>Due date:</big>&nbsp;<?php if(isset($transact_date) && isset($duration)){echo date('Y-m-d', strtotime($transact_date . + ($duration - 2) .'days'));}?></span><br>
-<span><big>Expected Profit:</big>&nbsp; <?php if(isset($transact_info['status']) && $transact_info['status']==="approved"){echo $transact_info['amount'] *$interest / $duration ;} ?></span><br>
 <?php } ?>
+</li>
+
+<li class="token-balance-sub col-md-12 col-lg-6 mb-3">
+    <?php
+    echo "<span class=''>Latest Deposit: ".$fund_info['amount']." ".$fund_info['currency']. "</span><br>";
+    $total_deposit = "SELECT sum(amount) AS totalsum FROM fund WHERE user_email='$session_email'";
+    $total_deposit_query = $con->query($total_deposit);
+    $total_deposit_display = mysqli_fetch_assoc($total_deposit_query);
+    
+
+   if($total_deposit_display){
+    $sum_of_rows = $total_deposit_display['totalsum'];
+    if(isset($withdraw_info['wstatus']) && $withdraw_info['wstatus']==="approved"){
+   //foreach($total_deposit_display as $total){extract($total)?>
+<span class=""><?= "Total Deposit: ".($sum_of_rows - $withdraw_info['wamount'])." ".$fund_info['currency']; ?></span>
+<span class="sub"></span>
+<span></span>
+<?php }else{echo "Your total deposits will appear here";} }?>
 </li>
                         </ul>
 </div>

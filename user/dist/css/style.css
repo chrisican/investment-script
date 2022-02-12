@@ -4033,7 +4033,7 @@ table.text-center, table.text-center td, table.text-center th {
 .login-logo, .register-logo {
 	font-size: 35px;
 	text-align: center;
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 	font-weight: 300
 }
 .login-logo a, .register-logo a {
@@ -4045,11 +4045,11 @@ table.text-center, table.text-center td, table.text-center th {
 }
 .login-page.sty1, .register-page.sty1{
 	background:url(../img/body-bg1.jpg) no-repeat center top;
-	background-size:cover;
+	background-size:cover; background-attachment: fixed;
 }
 .login-box, .register-box {
 	width: 400px;
-	margin: 7% auto;
+	margin: 5% auto;
 }
 .login-box.sty1, .register-box.sty1{
 	right: 0px;

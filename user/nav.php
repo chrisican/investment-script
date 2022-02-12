@@ -45,20 +45,20 @@
                         <li><a href="https://zenithbrokertrade.org/user/user-area.php"><span class="icon-s"><i class="fa fa-columns"></i>
                                     Dashboard</a></li>
                         <li><a href="https://zenithbrokertrade.org/user/edit-profile.php"><span class="icon-s"><i class="fa fa-user"></i>Edit Profile</a></li>
-                        <li><a href="https://zenithbrokertrade.org/user/create-trade.php"><i class="fa fa-chart-line"></i>Create Trade</a>
+                        <!-- <li><a href="https://zenithbrokertrade.org/user/create-trade.php"><i class="fa fa-chart-line"></i>Create Trade</a> -->
                         </li>
                         <li><a href="https://zenithbrokertrade.org/user/user-transactions.php"><i class="fa fa-file-invoice-dollar"></i> Account Transactions</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#withdrawal-modal"><i class="fa fa-hand-holding-usd"></i> Withdrawal</a></li>
                          <li><a href="https://zenithbrokertrade.org/user/logout.php"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
-                    <!-- <ul class="navbar-btns">
+                    <ul class="navbar-btns">
                         <li>
                             <a href="#" data-toggle="modal" data-target="#crypto-fund-modal" class="btn btn-sm btn-outline btn-light">
                                 <span class="icon-s"><i data-feather="file"></i></span>
                                 <span>Fund Account</span>
                             </a>
                         </li>
-                    </ul> -->
+                    </ul>
                 </div>
                 <!-- .navbar-innr -->
             </div>
@@ -116,12 +116,12 @@
                                 <select class="input-bordered" name="currency_id2">
                                      <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
-                        </select>
+                        </select><br><small style="color:red;">Only select currency that you own or withdrawal will fail</small>
                             </div>
                         </div>
                         <div class="input-item input-with-label">
                             <label class="input-item-label">Enter Amount</label>
-                            <input class="input-bordered" type="text" placeholder="Amount" name="amount2" required value="" />
+                            <input class="input-bordered" type="text" placeholder="Amount" name="amount2" required value="" /><br><small style="color:red;">Only enter an amount less than you own or withdrawal will fail</small>
                         </div>
                         <div class="input-item input-with-label">
                             <label class="input-item-label">Destination Address</label>
@@ -163,13 +163,12 @@
                         </div>
 
                         <div class="input-item input-with-label">
-                           <!--  <span class="input-item-label">Pay to this Address, afterwards, come back and click the upload proof button to upload proof</span> -->
-                            <input class="input-bordered" type="text" name="add" value="<?= $addresses;?>" id="myInput" disabled><br><button type="button" class="btn btn-warning" onclick="myFunction()">Copy address</button>
+                           <span class="input-item-label"><small>Pay to this Address, afterwards, come back and click the upload proof button or use your member transactions area to upload proof</small></span>
+                            <input class="input-bordered" type="text" name="add" value="<?= $addresses;?>" id="myInput" disabled><br><button type="button" class="btn btn-primary" onclick="myFunction()">Copy address</button>
                             <br><output id="displayText"></output>                    
                         </div>
                     <?php } }?>
-
-                        <!-- <a href="upload-proof.php" class="btn btn-warning btn-between" name="upload-proof">Click To Upload Proof&nbsp;<i class="fa fa-forward"></i></a> -->
+                        <a href="upload-proof.php" class="btn btn-primary btn-between" name="upload-proof">Click To Upload Proof&nbsp;<i class="fa fa-forward"></i></a>
                     </form>
                 </div>
             </div>
@@ -205,7 +204,8 @@
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div></div>
+                            </div><small class="text-danger">If you want to buy with your account balance, then, make sure you have enough balance else your trade request will not be approved by admin</small></div>
+
             <button type="submit" class="btn btn-warning btn-between" name="starter">Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
@@ -242,7 +242,7 @@
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div></div>
+                            </div><small class="text-danger">If you want to buy with your account balance, then, make sure you have enough balance else your trade request will not be approved by admin</small></div>
                         <button type="submit" class="btn btn-warning btn-between" name="premium">
                             Proceed <i class="fa fa-forward"></i>
                         </button>
@@ -280,7 +280,7 @@
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div></div>
+                            </div><small class="text-danger">If you want to buy with your account balance, then, make sure you have enough balance else your trade request will not be approved by admin</small></div>
                         <button type="submit" class="btn btn-warning btn-between" name="goldpack">Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>
@@ -317,7 +317,7 @@
                                     <?php foreach($sql_addresses_exec as $addresses_info){extract($addresses_info);?>
                                         <option value="<?= $addresses_info['wallets']?>"><?= $addresses_info['wallets']?></option><?php }?>
                                     </select>
-                            </div></div>
+                            </div><small class="text-danger">If you want to buy with your account balance, then, make sure you have enough balance else your trade request will not be approved by admin</small></div>
                         <button type="submit" class="btn btn-warning btn-between" name="goldplus">Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>

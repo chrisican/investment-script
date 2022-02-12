@@ -58,7 +58,7 @@
                         <li class="has-dropdown page-links-all">
                             <a class="drop-toggle" href="#"><i class="fa fa-chart-area"></i>Account Requests</a>
                             <ul class="navbar-dropdown">
-                               <!--  <li><a class="p2pText" href="funding-requests.php">Funding Requests</a></li> -->
+                               <li><a class="p2pText" href="funding-requests.php">Funding Requests</a></li>
                                  <li><a class="p2pText" href="transactions.php">Trade Requests</a></li> 
                                 <li><a class="p2pText" href="withdraw-requests.php">Withdraw Requests</a></li>
                             </ul>
@@ -88,71 +88,25 @@
  <!-- Modal End -->
     <!-- Modal Centered -->
     <!--FUND ACCOUNT -->
-    <div class="modal fade sho d-bloc" id="crypto-fund-modal" tabindex="-1">
+    <div class="modal fade sho d-bloc" id="editAmount" tabindex="-1">
         <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
             <div class="modal-content">
                 <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><big>&times;</big></a>
                 <div class="popup-body">
                     <form method="POST" action="fund-account.php">
-                        <!-- <input type="hidden" name="_token" value="ZbxLR83NJvu7Dwj3KmAR6ZFgMXG5d2po7uem0Zt2">  --> 
-                        <input type="hidden" name="Ftxn" value="<?= 'TXN'.mt_rand(100000,999999);?>">                      
+                        <input type="text" name="editAmount" value="<?php if(isset($GLOBALS['eFtxn']) && $GLOBALS['eFtxn']!==null){echo $GLOBALS['eFtxn'];}?>">
+                        <!--                       
                         <div class="input-item input-with-label">
                             <label class="input-item-label">Select currency to fund</label>
                             <div class="select-wrapper">
-                                <select class="input-bordered" name="currency_id">
-                               <option value="Ethereum" >Ethereum</option>
-                                          <option value="Bitcoin" >Bitcoin</option>
-                                          <option value="USD Coin" >USD Coin</option>
-                                          <option value="Tron" >Tron</option>
-                                          <option value="Bscpad" >Bscpad</option>
-                                          <option value="Shiba inu" >Shiba inu</option>
-                                          <option value="Tether" >Tether</option>
-                                          <option value="Algorand" >Algorand</option>
-                                          <option value="Kmushicoin" >Kmushicoin</option>
-                                          <option value="Cardence" >Cardence</option>
-                                          <option value="Helium" >Helium</option>
-                                          <option value="Cryptomines" >Cryptomines</option>
-                                          <option value="Ecomi" >Ecomi</option>
-                                          <option value="Ecomi" >Robot Shib</option>
-                                          <option value="Uniswap" >Uniswap</option>
-                                          <option value="Avalanche" >Avalanche</option>
-                                          <option value="Decentraland" >Decentraland</option>
-                                          <option value="Gravitoken" >Gravitoken</option>
-                                          <option value="Chroma" >Chroma</option>
-                                          <option value="Near" >Near</option>
-                                          <option value="Filecoin" >Filecoin</option>
-                                          <option value="Cardano" >Cardano</option>
-                                          <option value="Tether" >Tether (TRC 20)</option>
-                                          <option value="CHILIZ" >CHILIZ</option>
-                                          <option value="Trias Token" >Trias Token</option>
-                                          <option value="Ibnb" >Ibnb</option>
-                                          <option value="Polkadot" >Polkadot</option>
-                                          <option value="Solana" >Solana</option>
-                                          <option value="LUNA" >LUNA</option>
-                                          <option value="Helium" >Helium</option>
-                                          <option value="RaDAO" >RaDAO</option>
-                                          <option value="Radio Caca" >Radio Caca V2</option>
-                                          <option value="One Share" >One Share</option>
-                                          <option value="Revomon" >Revomon</option>
-                                          <option value="dydX" >dydX</option>
-                                          <option value="Scan DeFi V2" >Scan DeFi V2</option>
-                                          <option value="Binance Coin" >Binance Coin</option>
-                                          <option value="Casper Network" >Casper Network</option>
-                                          <option value="Spinada Cash" >Spinada Cash</option>
-                                          <option value="Binance USD" >Binance USD</option>
-                                          <option value="Video Coin" >Video Coin</option>
-                                          <option value="Chainlink" >Chainlink</option>
-                                          <option value="The Sandbox" >The Sandbox</option>
-                                          <option value="Polygon" >Polygon</option>
-                                          <option value="Binance Smart chain" >Binance Smart chain</option>
-                                    </select>
+                              
                             </div>
-                        </div>
+                        </div> -->
                         <div class="input-item input-with-label">
-                            <label class="input-item-label">Enter Amount</label>
-                            <input class="input-bordered" type="text" placeholder="Amount" name="amount" required />
+                            <label class="input-item-label">New amount</label>
+                            <input class="input-bordered" type="text" name="newAmount" required />
                         </div>
-                        <button type="submit" class="btn btn-warning btn-between" name="fund">
+                        <button type="submit" class="btn btn-warning btn-between" name="editBtn">
                             Proceed <i class="fa fa-forward"></i>
                         </button>
                     </form>

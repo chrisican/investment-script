@@ -70,35 +70,38 @@ if(isset($_POST['reg'])){
     else{
   $sqlIns = "INSERT INTO users(firstname,lastname,user_email,user_pass,affid)VALUES('$fname','$lname','$email','$cpass','$affid')";
   $sqlC = $con->query($sqlIns);
+
+  $sqlIns2 = "INSERT INTO fund(user_email,amount,status)VALUES('$email',50,'approved')";
+  $sqlC2 = $con->query($sqlIns2);
  if($sqlC){
   //Load Composer's autoloader
-// require 'admin/vendor/autoload.php';
+ require 'admin/vendor/autoload.php';
 
-// //Create an instance; passing `true` enables exceptions
-// $mail = new PHPMailer(true);
+ //Create an instance; passing `true` enables exceptions
+ $mail = new PHPMailer(true);
 
-// try {
-//     //Server settings
-//     $mail->SMTPDebug = 0;
-//     $mail->isSMTP();
-//     $mail->Host = 'zenithbrokertrade.org'; 
-//     $mail->SMTPAuth   = true; 
-//     $mail->Username   = 'noreply@zenithbrokertrade.org'; 
-//     $mail->Password   = '#NOREPLYmail99'; 
-//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-//     $mail->Port  = 465; 
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host = 'zenithbrokertrade.org'; 
+    $mail->SMTPAuth   = true; 
+    $mail->Username   = 'noreply@zenithbrokertrade.org'; 
+    $mail->Password   = '#NOREPLYmail99'; 
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port  = 465; 
 
-//     //Recipients
-//     $mail->setFrom('noreply@zenithbrokertrade.org', 'Zenith Broker Trade');
-//     $mail->addAddress('admin@zenithbrokertrade.org');
-//     $mail->isHTML(true);
-//     $mail->Subject = 'You have a new member';
-//     $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. https://zenithbrokertrade.org/user/admin/login.php';
-//     $mail->AltBody = 'A new member has just registered on the platform. Login to the admin dashboard to see this person';
-//     $mail->send();
-// } catch (Exception $e){echo " ";}
+    //Recipients
+    $mail->setFrom('noreply@zenithbrokertrade.org', 'Zenith Broker Trade');
+    $mail->addAddress('admin@zenithbrokertrade.org');
+    $mail->isHTML(true);
+    $mail->Subject = 'You have a new member';
+    $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. <a href="https://zenithbrokertrade.org/user/admin/login.php">Click Here</a> or copy and paste the below link to login <br>https://zenithbrokertrade.org/user/admin/login.php ';
+    $mail->AltBody = 'A new member has just registered on the platform. Login to the admin dashboard to see this person';
+    $mail->send();
+} catch (Exception $e){echo " ";}
 
-  $toast = "success";//header("Refresh:2,url=preloader.php?fn=$fname&em=$email");
+  $toast = "success";header("Refresh:2,url=preloader.php?fn=$fname&em=$email");
 }else{$toast = "fail";} 
 }
 }}
@@ -142,13 +145,12 @@ if(isset($_POST['reg'])){
 <div class="login-box sty1">
   <div class="login-box-body sty1">
   <div class="login-logo m-t-0 p-t-0">
-    <a href="#"><span class="lead"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span></span>
-      <!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
+    <a href="#"><span class="lead"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span></span></a>
   </div>
     <p class="login-box-msg m-t-0 p-t-0">Fill the form to create a trading account</p>
      <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" name="regForm">
       <div class="form-group has-feedback">
-        <input type="text" name="affid" class="form-control sty1" value="<?= mt_rand(100000,999999);?>" hidden>
+        <input type="hidden" name="affid" class="form-control sty1" value="<?= mt_rand(100000,999999);?>">
       </div>
       <div class="form-group has-feedback">
         <input type="text" name="fname" class="form-control sty1" placeholder="Firstname" required>
