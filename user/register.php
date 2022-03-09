@@ -63,7 +63,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 if(isset($_POST['reg'])){
   $affid = $_POST['affid'];
   if($pass===$cpass){
-    $active = "<a href='https://zenithbrokertrade.org/user/admin/login.php'>Login</a>";
+    $active = "";
     $sql_check_email_exists = "SELECT * FROM users WHERE user_email = '$email'";
     $sql_check_email_exec = $con->query($sql_check_email_exists);
     if(mysqli_num_rows($sql_check_email_exec)>0){$toast = "email";}
@@ -84,19 +84,19 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;
     $mail->isSMTP();
-    $mail->Host = 'zenithbrokertrade.org'; 
+    $mail->Host = ''; 
     $mail->SMTPAuth   = true; 
-    $mail->Username   = 'noreply@zenithbrokertrade.org'; 
-    $mail->Password   = '#NOREPLYmail99'; 
+    $mail->Username   = ''; 
+    $mail->Password   = ''; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port  = 465; 
 
     //Recipients
-    $mail->setFrom('noreply@zenithbrokertrade.org', 'Zenith Broker Trade');
-    $mail->addAddress('admin@zenithbrokertrade.org');
+    $mail->setFrom();
+    $mail->addAddress();
     $mail->isHTML(true);
     $mail->Subject = 'You have a new member';
-    $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person. <a href="https://zenithbrokertrade.org/user/admin/login.php">Click Here</a> or copy and paste the below link to login <br>https://zenithbrokertrade.org/user/admin/login.php ';
+    $mail->Body    = 'A new member has just registered on the platform. Login to the admin dashboard to see this person.';
     $mail->AltBody = 'A new member has just registered on the platform. Login to the admin dashboard to see this person';
     $mail->send();
 } catch (Exception $e){echo " ";}
@@ -112,7 +112,7 @@ try {
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Member Registration | Zenith Broker Trade</title>
+<title>Member Registration</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
