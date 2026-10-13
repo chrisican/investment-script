@@ -374,8 +374,8 @@ $con->close();
    
     <!-- JavaScript (include all script here) -->
 <script src="https://transactright.com/js/app.js"></script>
-    <script src="./assets/js/jquery.bundle49f7.js"></script>
-    <script src="./assets/js/script49f7.js"></script>
+    <script src="./assets/js/jquery.bundle49f7.js" defer></script>
+        <script src="./assets/js/script49f7.js" defer></script>
        <!--  <script type="text/javascript">
         $('#reload').click(function() {
             $.ajax({
@@ -389,7 +389,7 @@ $con->close();
     </script> -->
  <!-- Toastr -->
 <script src="dist/js/toastr.min.js"></script>
-<script src="//code.tidio.co/ylcbkybnqaslgvjzhluenllylwxzgcyl.js" async></script>
+    <script src="//code.tidio.co/ylcbkybnqaslgvjzhluenllylwxzgcyl.js" defer></script>
     </body>
     </html>
     <?php

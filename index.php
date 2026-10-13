@@ -1355,7 +1355,7 @@ c15.3,22.7,51,22.7,53,23v28.1H0V80z" />
 <script src="js/Youtube.min.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
-<script src="//code.tidio.co/4amhwb6g67tepvxrle85xmbmlwjyunkk.js" async></script>
+<script src="//code.tidio.co/4amhwb6g67tepvxrle85xmbmlwjyunkk.js" defer></script>
 </body>
 
 </html>

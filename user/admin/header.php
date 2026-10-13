@@ -19,14 +19,18 @@
     <link rel="stylesheet" href="../assets/css/custom.css">
     <link rel="stylesheet" href="../assets/css/vendor.bundle49f7.css">
     <link rel="stylesheet" href="../assets/css/style.css" id="layoutstyle">
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="dns-prefetch" href="//code.tidio.co">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="./dist/bootstrap/css/bootstrap.min.css"> -->
     <!--Toastr-->
 <link rel="stylesheet" type="text/css" href="../dist/css/toastr.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/b1e2cc998d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b1e2cc998d.js" crossorigin="anonymous" defer></script>
     <style type="text/css">
         .card-token{background-color:#5867dd !important; 
             background-image:linear-gradient(45deg,#5867dd 0%, #5867dd 100%) !important;}

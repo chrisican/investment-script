@@ -198,10 +198,10 @@ if(!isset($_SESSION['email'])){header('Location:login.php');}
 <!-- Modal End -->
 <!-- JavaScript (include all script here) -->
 <script src="https://transactright.com/js/app.js"></script>
-<script src="./assets/js/jquery.bundle49f7.js"></script>
-<script src="./assets/js/script49f7.js"></script>
+<script src="./assets/js/jquery.bundle49f7.js" defer></script>
+<script src="./assets/js/script49f7.js" defer></script>
 
-<script src="//code.tidio.co/4amhwb6g67tepvxrle85xmbmlwjyunkk.js" async></script>
+<script src="//code.tidio.co/4amhwb6g67tepvxrle85xmbmlwjyunkk.js" defer></script>
 </body>
 
 </html>
